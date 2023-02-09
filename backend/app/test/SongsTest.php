@@ -1,39 +1,4 @@
 <?php
-// use PHPUnit\Framework\TestCase;
-
-// class SongsTest extends TestCase{
-//     function testAddRows(){
-//         // $songs = new Songs;
-//         // $entrydata = addRow(12, "Rebelde", "RBD", "pop", "hahaha", "02/02/2022", true);
-
-//         // $outputdata = [true, "{$entrydata["title"]}"];
-//         // $datossalidareales = $songs->addRow(12, "Rebelde", "RBD", "pop", "hahaha", "02/02/2022", true);
-//         // $this->assertEquals($outputdata, $datossalidareales);
-
-
-//         {
-//             public $connection;
-        
-//             public function setUp(): void
-//             {
-//                 $this->connection = new \PDO('mysql:host=localhost;dbname=test_db', 'username', 'password');
-//                 $this->connection->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-//             }
-        
-//             public function testGetRows()
-//             {
-//                 $song = new Song($this->connection);
-//                 $rows = $song->getRows();
-        
-//                 $this->assertCount(2, $rows);
-//                 $this->assertEquals('Song 1', $rows[0]['title']);
-//                 $this->assertEquals('Artist 1', $rows[0]['artist']);
-//                 $this->assertEquals('Song 2', $rows[1]['title']);
-//                 $this->assertEquals('Artist 2', $rows[1]['artist']);
-//             }
-//         }
-//     }
-// }
 
 use PHPUnit\Framework\TestCase;
 require "/xampp/htdocs/proyecto-bd/popders_music/backend/app/connection/CrudConnection.php";
@@ -58,6 +23,55 @@ class SongsTest extends TestCase{
         $this->assertEquals('Artist 1', $rows[0]['artist']);
         $this->assertEquals('Song 2', $rows[1]['title']);
         $this->assertEquals('Artist 2', $rows[1]['artist']);
+    }
+
+    public function testAddRow()
+    {
+        $song = new Songs($this->connection);
+
+        $datosEntrada = [         
+            "id_coder" => 1,             
+            "title" => "Flowers",
+            "artist" => "Miley Cyrus",
+            "genre" => "Pop",
+            "url" => "https://www.youtube.com/watch?v=G7KNmW9a75Y",
+            "date" => "09-02-2023",
+            "status" => false
+        ];
+    
+        $resultAdd = $song->addRow($datosEntrada["id_coder"], $datosEntrada["title"], $datosEntrada["artist"], $datosEntrada["genre"], $datosEntrada["url"], $datosEntrada["date"], $datosEntrada["status"]);
+        $this->assertTrue($resultAdd);
+    }
+
+    public function testUpdateRow()
+    {
+        $song = new Songs($this->connection);
+
+        $datosEntrada = [   
+            "id_song" => 1,      
+            "id_coder" => 1,             
+            "title" => "Volare",
+            "artist" => "Danny Ocean",
+            "genre" => "Reggaeton",
+            "url" => "https://www.youtube.com/watch?v=GGAcqZUOwRE",
+            "date" => "10-02-2023",
+            "status" => false
+        ];
+    
+        $resultUpdate = $song->updateRow($datosEntrada["id_song"], $datosEntrada["id_coder"], $datosEntrada["title"], $datosEntrada["artist"], $datosEntrada["genre"], $datosEntrada["url"], $datosEntrada["date"], $datosEntrada["status"]);
+        $this->assertTrue($resultUpdate);
+    }
+
+    public function testDeleteRow()
+    {
+        $song = new Songs($this->connection);
+
+        $datosEntrada = [         
+            "id_coder" => 1,             
+        ];
+    
+        $resultDelete = $song->deleteRow($datosEntrada["id_coder"]);
+        $this->assertTrue($resultDelete);
     }
 }
 
