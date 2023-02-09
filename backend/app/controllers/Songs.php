@@ -1,5 +1,6 @@
 <?php
-require 'CrudConnection.php';
+//use App\Connection\CrudConnection;
+require '/xampp/htdocs/popders_music/popders_music/backend/app/connection/CrudConnection.php';
 
 class Songs extends CrudConnection
 {
@@ -24,6 +25,7 @@ class Songs extends CrudConnection
     {
         $addRowQuery = "insert into song (id_coder,title,artist,genre,url,date,status) values ('$id_coder','$title' ,'$artist', '$genre', '$url', '$date', '$status')";
         $this->connection->query($addRowQuery);
+        echo "Se ha insertado correctamente " . $title . "\n";
     }
 
     function updateRow($id_song, $id_coder, $title, $artist, $genre, $url, $date, $status)
@@ -33,15 +35,17 @@ class Songs extends CrudConnection
     WHERE id_song = '$id_song' ";
 
         $this->connection->query($updateQuery);
+        echo "Se ha modificado correctamente el " . $title . "\n";
     }
 
     function deleteRow($id_song)
     {
         $deleteQuery = "DELETE FROM song WHERE id_song = '$id_song'";
         $this->connection->query($deleteQuery);
+        echo "Se ha eliminado correctamente " . $id_song . "\n";
     }
 }
 
 $movement = new Songs;
-$movement->deleteRow(12);
+$movement->deleteRow(5);
 var_dump($movement);

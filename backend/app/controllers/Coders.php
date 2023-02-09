@@ -1,5 +1,6 @@
 <?php
 
+use CrudConnection;
 
 class Coders extends CrudConnection
 {
@@ -24,6 +25,7 @@ class Coders extends CrudConnection
     {
         $addRowQuery = "insert into coder (name) values ('$name')";
         $this->connection->query($addRowQuery);
+        echo "Se ha insertado correctamente " . $name . "\n";
     }
 
     public function updateRow($id_coder, $name)
@@ -33,12 +35,15 @@ class Coders extends CrudConnection
         WHERE id_coder = '$id_coder'";
 
         $this->connection->query($updateQuery);
+        echo "Se ha modificado correctamente el coder con " . $id_coder . "y el nombre" . $name . "\n";
     }
 
     function deleteRow($id_coder)
     {
         $deleteQuery = "DELETE FROM coder WHERE id_coder = '$id_coder'";
         $this->connection->query($deleteQuery);
+
+        echo "Se ha eliminado correctamente " . $id_coder . "\n";
     }
 }
 
