@@ -1,6 +1,6 @@
 <?php
-//use App\Connection\CrudConnection;
-require '/xampp/htdocs/popders_music/popders_music/backend/app/connection/CrudConnection.php';
+use App\Connection\CrudConnection;
+//require '/xampp/htdocs/popders_music/popders_music/backend/app/connection/CrudConnection.php';
 
 class Songs extends CrudConnection
 {
@@ -15,10 +15,12 @@ class Songs extends CrudConnection
     {
         $seeAllQuery = 'SELECT title, artist FROM song';
         foreach ($this->connection->query($seeAllQuery) as $row) {
-            echo "\n";
-            echo $row['title'] . "\n";
-            echo $row['artist'] . "\n";
+            $rows[] = [
+                'title' => $row['title'],
+                'artist' => $row['artist']
+            ];
         }
+        return $rows;
     }
 
     public function addRow($id_coder, $title, $artist, $genre, $url, $date, $status)

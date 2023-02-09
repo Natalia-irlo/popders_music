@@ -36,13 +36,15 @@
 // }
 
 use PHPUnit\Framework\TestCase;
+require "/xampp/htdocs/proyecto-bd/popders_music/backend/app/connection/CrudConnection.php";
+require "/xampp/htdocs/proyecto-bd/popders_music/backend/app/controllers/Songs.php";
 
 class SongsTest extends TestCase{
     public $connection;
 
     public function setUp(): void
     {
-        $this->connection = new \PDO('mysql:host=localhost;dbname=test_db', 'username', 'password');
+        $this->connection = new \PDO("mysql:host=localhost;dbname=popders", "root", "");
         $this->connection->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
     }
 
