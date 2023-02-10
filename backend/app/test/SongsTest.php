@@ -1,8 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-require "/xampp/htdocs/proyecto-bd/popders_music/backend/app/connection/CrudConnection.php";
-require "/xampp/htdocs/proyecto-bd/popders_music/backend/app/controllers/Songs.php";
+use App\Connection\CrudConnection;
+use App\Controllers\Songs;
 
 class SongsTest extends TestCase{
     public $connection;

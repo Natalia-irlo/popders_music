@@ -1,6 +1,6 @@
 <?php
+namespace App\Controllers;
 use App\Connection\CrudConnection;
-//require '/xampp/htdocs/popders_music/popders_music/backend/app/connection/CrudConnection.php';
 
 class Songs extends CrudConnection
 {
