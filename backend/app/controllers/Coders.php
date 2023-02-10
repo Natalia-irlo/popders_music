@@ -16,9 +16,7 @@ class Coders extends CrudConnection
         $rows = [];
         $seeAllQuery = 'SELECT name FROM coder';
         foreach ($this->connection->query($seeAllQuery) as $row) {
-            $rows[] = [
-                'name' => $row['name'],
-            ];
+            $rows[] = $row['name'];
         }
         return $rows;
     }
@@ -27,7 +25,7 @@ class Coders extends CrudConnection
     public function addRow($name)
     {
         $addRowQuery = "insert into coder (name) values ('$name')";
-        $this->connection->query($addRowQuery);
+        $resultAdd = $this->connection->query($addRowQuery);
         echo "Se ha insertado correctamente " . $name . "\n";
         if ($resultAdd){
             return true;
@@ -63,7 +61,5 @@ class Coders extends CrudConnection
             return false;
         }
     }
+     
 }
-
-$movement = new Coders;
-$movement->addRow("Natalia");

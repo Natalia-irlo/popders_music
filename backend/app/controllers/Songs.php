@@ -16,8 +16,8 @@ class Songs extends CrudConnection
         $seeAllQuery = 'SELECT title, artist FROM song';
         foreach ($this->connection->query($seeAllQuery) as $row) {
             $rows[] = [
-                'title' => $row['title'],
-                'artist' => $row['artist']
+                $row['title'],
+                $row['artist']
             ];
         }
         return $rows;
@@ -62,7 +62,3 @@ class Songs extends CrudConnection
         }
     }
 }
-
-$movement = new Songs;
-$movement->deleteRow(5);
-var_dump($movement);
