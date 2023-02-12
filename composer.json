@@ -2,8 +2,7 @@
     "name": "factoriaf5/popders_music",
     "autoload": {
         "psr-4": {
-            "Factoriaf5\\PopdersMusic\\": "src/",
-            "Back-end\\App": "back-end//app"
+            "App\\":"backend/app/"
         }
     },
     "authors": [
@@ -13,6 +12,6 @@
         }
     ],
     "require-dev": {
-        "phpunit/phpunit": "*"
+        "phpunit/phpunit": "^10.0"
     }
 }
