@@ -13,10 +13,6 @@
 
 <body>
   
-  <div class="bg-image" style="
-    background-image: url('./asset//sean-sinclair-C_NJKfnTR5A-unsplash.jpg');
-    height: 100vh;
-  ">
     <header>
       <div class="p-3 text-left bg-light">
         <div class="form-outline">
