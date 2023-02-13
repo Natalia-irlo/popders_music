@@ -17,7 +17,7 @@ class CrudConnection
             $conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
             echo "Connected successfully";
             return $conn;
-        } catch (PDOException $e) {
+        } catch (\PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
         }
     }
