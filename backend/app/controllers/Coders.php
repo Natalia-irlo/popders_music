@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Controllers;
 use App\Connection\CrudConnection;
 
 class Coders extends CrudConnection
