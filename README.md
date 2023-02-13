@@ -12,7 +12,7 @@ This project is a platform created to manage the songs to say good morning to th
 
 ## Screenshots :desktop_computer:
 ### This is the Popder's Logo
-![This is an image](../popders_music/src/logo-popCoder-multicolor.png)
+![This is an image](./src/logo-popCoder-multicolor.png)
 ### These are the page views:
 ![This is an image]()
 
