@@ -52,7 +52,7 @@ body{
 }
 
 .title-small{
-    color: rgb(231, 27, 194);
+    color: red;
     font-size: 40px;
     font-weight: 400;
     z-index: 1;
