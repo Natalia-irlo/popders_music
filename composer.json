@@ -1,15 +1,14 @@
 {
-    "name": "nati/popders_music",
+    "name": "factoriaf5/popders_music",
     "autoload": {
         "psr-4": {
             "App\\":"backend/app/"
         }
-
     },
     "authors": [
         {
-            "name": "natalia",
-            "email": "natiriarte5@gmail.com"
+            "name": "SharonInfante",
+            "email": "sharonshabel@gmail.com"
         }
     ],
     "require-dev": {
