@@ -1,8 +1,22 @@
+.content-search{
+    background-color: whitesmoke;
+    opacity: 0.5;
+    width:fit-content;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+}
+
 .search{
     width: 370px;
     height: 60px;
+    border:none;
+    background-color:inherit;
+    font-size: 2rem;
+    /* color:white; */
 }
 
 .icon-search{
-    width: 30px;
+    width: 2rem;
+    height:2rem;
 }
