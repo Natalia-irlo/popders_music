@@ -1,5 +1,7 @@
 <?php
-namespace App\Controllers;
+
+namespace App\Controllers\Songs;
+
 use App\Connection\CrudConnection;
 
 class Coders extends CrudConnection
@@ -27,9 +29,9 @@ class Coders extends CrudConnection
         $addRowQuery = "insert into coder (name) values ('$name')";
         $resultAdd = $this->connection->query($addRowQuery);
         echo "Se ha insertado correctamente " . $name . "\n";
-        if ($resultAdd){
+        if ($resultAdd) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
@@ -42,9 +44,9 @@ class Coders extends CrudConnection
 
         $resultUpdate = $this->connection->query($updateQuery);
         echo "Se ha modificado correctamente el coder con " . $id_coder . "y el nombre" . $name . "\n";
-        if ($resultUpdate){
+        if ($resultUpdate) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
@@ -55,11 +57,10 @@ class Coders extends CrudConnection
         $resultDelete = $this->connection->query($deleteQuery);
 
         echo "Se ha eliminado correctamente " . $id_coder . "\n";
-        if ($resultDelete){
+        if ($resultDelete) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
-     
 }
