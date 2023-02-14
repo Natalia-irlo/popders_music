@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers\Songs;
+namespace App\Controllers;
 
 use App\Connection\CrudConnection;
 
