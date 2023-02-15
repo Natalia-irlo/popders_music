@@ -31,6 +31,7 @@
                     </span>
                 </li>
                 <li id="city" class="city"></li>
+                <li id="fa-duotone fa-gear"></i>
                 <li ><img src=" " id="weather-icon" width="35px" /></li>
                 <li id="degrees">ºC</li>
                 <li id="date"></li>

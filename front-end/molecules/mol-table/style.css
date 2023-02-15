@@ -13,17 +13,17 @@ body{
 .container-home{
   background-color: #FFFFFF;
   opacity: 60%;
-  width: 1250px;
-  height: 796px;
+  width: 80vw;
+  height: 65vh;
   margin: auto;
   margin-top: 4%;
   z-index: -1;
   display: grid;
   
 }
-.table{
-  width: 1250px;
-  height: 796px;
+.table-home{
+  width: 65vw;
+  height: 80vh;
 }
 .date{
   display: flex;
@@ -40,12 +40,5 @@ body{
     justify-content: center;
 }
 
-.form-group{
-     height: 10px;
-     width: 200px;
-     position: absolute;
-     top: 120px;
-     margin-left: 200px;
-     position: relative;
-    }
+
   
