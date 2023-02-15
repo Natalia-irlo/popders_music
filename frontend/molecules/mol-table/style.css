@@ -13,8 +13,8 @@ body{
 .container-home{
   background-color: #FFFFFF;
   opacity: 60%;
-  width: 80vw;
-  height: 65vh;
+  width: 1250px;
+  height: 796px;
   margin: auto;
   margin-top: 4%;
   z-index: -1;
@@ -25,20 +25,21 @@ body{
   width: 65vw;
   height: 80vh;
 }
-.date{
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 5%;
-}
 
-.date-time{
-  font-size: 40px;
-  color: #FFBE02;
-}
 .container{
   display: flex;
-    justify-content: center;
+  justify-content: end;
+  align-items: end;
+  width: 100%;
+  margin-top: 50px;
 }
+ul{
+  list-style: none;
+}
+li{
+  margin-right: 5px;
+  color: #FFBE02;
+} 
 
 
   
