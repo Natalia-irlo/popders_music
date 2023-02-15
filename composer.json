@@ -2,7 +2,8 @@
     "name": "meena/popders_music",
     "autoload": {
         "psr-4": {
-            "Meena\\PopdersMusic\\": "src/"
+            "App\\":"backend/app/",
+            "Front\\":"frontend/"
         }
     },
     "require": {}
