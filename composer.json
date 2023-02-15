@@ -1,16 +1,9 @@
 {
-    "name": "user/popders_music",
+    "name": "meena/popders_music",
     "autoload": {
         "psr-4": {
-            "App\\":"backend/app/",
-            "Front\\":"frontend/"
+            "Meena\\PopdersMusic\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "DianaB177",
-            "email": "anaidb77@gmail.com"
-        }
-    ],
     "require": {}
 }
