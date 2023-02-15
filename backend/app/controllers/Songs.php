@@ -1,6 +1,8 @@
 <?php
 namespace App\Controllers;
 use App\Connection\CrudConnection;
+require_once "./vendor/autoload.php";
+
 
 class Songs extends CrudConnection
 {
@@ -62,3 +64,7 @@ class Songs extends CrudConnection
         }
     }
 }
+
+$movement = new Songs;
+$movement->addRow(1,'La bachata', 'Manuel Turizo', 'Bachata','https://www.youtube.com/watch?v=TiM_TFpT_DE','2023-02-15', false);
+var_dump($movement);
