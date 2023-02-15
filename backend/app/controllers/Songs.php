@@ -1,8 +1,8 @@
 <?php
 namespace App\Controllers;
 use App\Connection\CrudConnection;
-require_once "./vendor/autoload.php";
 
+//require_once "./vendor/autoload.php";
 
 class Songs extends CrudConnection
 {
@@ -26,12 +26,12 @@ class Songs extends CrudConnection
     }
 
     public function addRow($id_coder, $title, $artist, $genre, $url, $date, $status)
-    {
-        $addRowQuery = "insert into song (id_coder,title,artist,genre,url,date,status) values ('$id_coder','$title' ,'$artist', '$genre', '$url', '$date', '$status')";
+    {   
+        $addRowQuery = "insert into song (id_coder,title,artist,genre,url,date,status) values ('$id_coder', '$title' ,'$artist', '$genre', '$url', '$date', '$status')";
         $resultAdd = $this->connection->query($addRowQuery);
         echo "Se ha insertado correctamente " . $title . "\n";
         if ($resultAdd){
-            return true;
+            return $id_coder;
         }else {
             return false;
         }
@@ -65,6 +65,6 @@ class Songs extends CrudConnection
     }
 }
 
-$movement = new Songs;
-$movement->addRow(1,'La bachata', 'Manuel Turizo', 'Bachata','https://www.youtube.com/watch?v=TiM_TFpT_DE','2023-02-15', false);
-var_dump($movement);
+// $movement = new Songs;
+// $movement->addRow(1,'La bachata', 'Manuel Turizo', 'Bachata','https://www.youtube.com/watch?v=TiM_TFpT_DE','2023-02-15', false);
+// var_dump($movement);

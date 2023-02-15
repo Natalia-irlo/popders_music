@@ -27,23 +27,23 @@ class Coders extends CrudConnection
     public function addRow($name)
     {
         $addRowQuery = "insert into coder (name) values ('$name')";
-        $resultAdd = $this->connection->query($addRowQuery);
-        echo "Se ha insertado correctamente " . $name . "\n";
-        if ($resultAdd){
+        $resultAdd = $this->connection->query($addRowQuery);  
+        echo "Se ha insertado correctamente " . $name ."\n";
+        if ($resultAdd){                    
             return true;
         }else {
             return false;
         }
     }
 
-    public function updateRow($id_coder, $name)
+    public function updateRow($name)
     {
         $updateQuery = "UPDATE coder
         SET name ='$name'
-        WHERE id_coder = '$id_coder'";
+        WHERE name = '$name'";
 
         $resultUpdate = $this->connection->query($updateQuery);
-        echo "Se ha modificado correctamente el coder con " . $id_coder . "y el nombre" . $name . "\n";
+        echo "Se ha modificado correctamente el coder con " . $name . "y el nombre" . $name . "\n";
         if ($resultUpdate){
             return true;
         }else {
@@ -64,13 +64,13 @@ class Coders extends CrudConnection
         }
     }
 
-    function existsCoder($name) {
+  /*  function existsCoder($name) {
         $query = "SELECT id_coder FROM coder WHERE name = '{$name}'";
 
-        $result = $this->connection->query($consulta);
+        $result = $this->connection->query($query);
         $row = $result->fetch(PDO::FETCH_OBJ);
 
         return $row == false ? false : $row->id_coder;
     }
-     
+     */
 }
