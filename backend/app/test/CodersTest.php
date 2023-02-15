@@ -9,7 +9,7 @@ class CodersTest extends TestCase{
 
     public function setUp(): void
     {
-        $this->connection = new \PDO("mysql:host=localhost;dbname=popders", "root", "");
+        $this->connection = new \PDO("mysql:host=localhost;dbname=popdersname", "root", "");
         $this->connection->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
     }
 
