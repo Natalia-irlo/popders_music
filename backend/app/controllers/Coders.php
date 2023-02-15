@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Controllers;
+
 use App\Connection\CrudConnection;
 
 class Coders extends CrudConnection
@@ -60,6 +62,15 @@ class Coders extends CrudConnection
         }else {
             return false;
         }
+    }
+
+    function existsCoder($name) {
+        $query = "SELECT id_coder FROM coder WHERE name = '{$name}'";
+
+        $result = $this->connection->query($consulta);
+        $row = $result->fetch(PDO::FETCH_OBJ);
+
+        return $row == false ? false : $row->id_coder;
     }
      
 }
