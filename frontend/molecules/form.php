@@ -1,37 +1,52 @@
 <?php
 
-require_once "../../vendor/autoload.php";
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 use App\Controllers\Songs;
+use App\Controllers\Coders;
 
-// function required_validation($text): bool
-// {
-//     if (!empty($text)) {
-//         return True;
-//     } else {
-//         echo '<script language="javascript" type="text/javascript">
-//         alert("Introduzca datos");
-//         window.location = "madesign.php";
-//         </script>';
-//         return False;
-//     }
-// }
-
+$conn_coders = new Coders();
+$conn_songs = new Songs();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $addIdCoder = filter_input(INPUT_POST, "coder");
-    $addTitle = filter_input(INPUT_POST, "titulo");
-    $addArtist = filter_input(INPUT_POST, "artist");
-    $addGenre = filter_input(INPUT_POST, "genre");
-    $addURL = filter_input(INPUT_POST, "url");
+    $coder = isset($_POST['coder']) && !empty($_POST['coder']) ? $_POST['coder'] : null;
+    $title = isset($_POST['title']) && !empty($_POST['title']) ? $_POST['coder'] : null;
+    $artist = isset($_POST['artist']) && !empty($_POST['artist']) ? $_POST['coder'] : null;
+    $genre = isset($_POST['genre']) && !empty($_POST['genre']) ? $_POST['coder'] : null;
+    $url = isset($_POST['url']) && !empty($_POST['url']) ? $_POST['coder'] : null;
 
-    $addDate = date('Y-m-d H:i:s');
-    $addPlayed = false;
+    if (is_null($coder) || is_null($title) || is_null($artist)) {
+        echo "Faltan datos por rellenar";
+    }
 
-    $insertSong = new Songs;
-    $insertSong->addRow($addIdCoder, $addTitle, $addArtist, $addGenre, $addURL, $addDate, $addPlayed);
+    $idCoder = $conn_coders->existsCoder($coder);
+
+    if ($idCoder) {
+        $continue = true;
+        echo "El coder {$idCoder}:{$coder} ya existe en la base de datos.";
+    } else {
+        echo "El coder {$coder} no existe en la base de datos.";
+    }
+
+    $continue = $conn_coders->addRow($coder);
+    if ($continue) {
+        echo "Se ha añadido a {$coder} a la base de datos.";
+        $idCoder = $conn_coders->existsCoder($coder);
+    } else {
+        echo "Error al crear {$coder} en la base de datos.";
+    }
+
+    if ($continue) {
+        $date = date('Y-m-d H:i:s');
+        $status = 1;
+    }
+    $insertSong = $conn_songs->addRow($coder, $title, $artist, $genre, $url, $date, $status);
+    if ($insertSong) {
+        echo "{$coder} ha añadido {$title} del artista {$artista}.";
+    } else {
+        echo "{$coder} no ha podido añadir la canción {$title}.";
+    }
 }
-
 
 ?>
 
