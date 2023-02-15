@@ -4,20 +4,34 @@ require_once "../../vendor/autoload.php";
 
 use App\Controllers\Songs;
 
-/*if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-}*/
+// function required_validation($text): bool
+// {
+//     if (!empty($text)) {
+//         return True;
+//     } else {
+//         echo '<script language="javascript" type="text/javascript">
+//         alert("Introduzca datos");
+//         window.location = "madesign.php";
+//         </script>';
+//         return False;
+//     }
+// }
 
-$addIdCoder = filter_input(INPUT_POST, "coder");
-$addTitle = filter_input(INPUT_POST, "titulo");
-$addArtist = filter_input(INPUT_POST, "artist");
-$addGenre = filter_input(INPUT_POST, "genre");
-$addURL = filter_input(INPUT_POST, "url");
 
-$addDate = date('Y-m-d H:i:s');
-$addPlayed = false;
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $addIdCoder = filter_input(INPUT_POST, "coder");
+    $addTitle = filter_input(INPUT_POST, "titulo");
+    $addArtist = filter_input(INPUT_POST, "artist");
+    $addGenre = filter_input(INPUT_POST, "genre");
+    $addURL = filter_input(INPUT_POST, "url");
 
-$insertSong = new Songs;
-$insertSong->addRow($addIdCoder, $addTitle, $addArtist, $addGenre, $addURL, $addDate, $addPlayed);
+    $addDate = date('Y-m-d H:i:s');
+    $addPlayed = false;
+
+    $insertSong = new Songs;
+    $insertSong->addRow($addIdCoder, $addTitle, $addArtist, $addGenre, $addURL, $addDate, $addPlayed);
+}
+
 
 ?>
 
