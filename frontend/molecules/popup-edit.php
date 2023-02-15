@@ -48,12 +48,10 @@ h1{
 
 </style>
     
-            
-            <a href="#" data-toggle="modal" data-target="#exampleModal">Editor</a>
+     <a href="#" data-toggle="modal" data-target="#exampleModal">Editor</a>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-     <div class="modal-dialog modal-sm" role="document">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header-sm">
                     <button type="button" class="close" data-dismiss="modal" aria-label="close">
@@ -62,38 +60,36 @@ h1{
                 </div>
                 <div class="modal-body form text-center">
                     <form action="#" method=post>
-                        <h1>Editor</h1><br>
+                        <h1>Editor</h1><br>                        
+                        <sub class="txt">Coder</sub>&#160;
+                        <input type="text" name="coder" id="r-coder" class="plch" placeholder="">
+                        <small id="r-msg-pass" class="d-block text-danger"></small><br>
+                        <sub class="txt">Avatar</sub>&#160;
+                        <input  type="text" name="title" id="r-title" class="plch" placeholder="">
+                        <small id="r-msg-pass" class="d-block text-danger"></small><br>
                         
-                                <sub class="txt">Coder</sub>&#160;
-                                <input type="text" name="coder" id="r-coder" class="plch" placeholder="">
-                                <small id="r-msg-pass" class="d-block text-danger"></small><br>
-                                <sub class="txt">Avatar</sub>&#160;
-                                <input  type="text" name="title" id="r-title" class="plch" placeholder="">
-                                <small id="r-msg-pass" class="d-block text-danger"></small><br>
-                               
-                                <sub class="txt">Titulo</sub>&#160;
-                                <input type="text" name="artist" id="r-artist" class="plch" placeholder="">
-                                <small id="r-msg-pass" class="d-block text-danger"></small><br>
-                                
-                                <sub class="txt">Artista</sub>&#160;
-                                <input type="text" name="genre" id="r-genre" class="plch" placeholder="">
-                                <small id="r-msg-pass" class="d-block text-danger"></small><br>
-                               
-                                <sub class="txt">Genre</sub>&#160;
-                                <input type="text" name="avatar" id="r-avatar" class="plch" placeholder="">
-                                <small id="r-msg-pass" class="d-block text-danger"></small><br>
-                              
-                                <sub class="txt">Url</sub>&#160;&emsp;
-                                <input type="text" name="url" id="r-url" class="plch" placeholder="">
-                                <small id="r-msg-pass" class="d-block text-danger"></small>
-                                <br>
-                                <button class="btn" type="submit" >Submit</button>
+                        <sub class="txt">Titulo</sub>&#160;
+                        <input type="text" name="artist" id="r-artist" class="plch" placeholder="">
+                        <small id="r-msg-pass" class="d-block text-danger"></small><br>
+                        
+                        <sub class="txt">Artista</sub>&#160;
+                        <input type="text" name="genre" id="r-genre" class="plch" placeholder="">
+                        <small id="r-msg-pass" class="d-block text-danger"></small><br>
+                        
+                        <sub class="txt">Genre</sub>&#160;
+                        <input type="text" name="avatar" id="r-avatar" class="plch" placeholder="">
+                        <small id="r-msg-pass" class="d-block text-danger"></small><br>
+                        
+                        <sub class="txt">Url</sub>&#160;&emsp;
+                        <input type="text" name="url" id="r-url" class="plch" placeholder="">
+                        <small id="r-msg-pass" class="d-block text-danger"></small>
+                        <br>
+                        <button class="btn" type="submit" >Submit</button>
                                 
                     </form>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
 

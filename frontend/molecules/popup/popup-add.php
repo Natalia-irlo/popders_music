@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
      
-            <a href="#" data-toggle="modal" data-target="#exampleModal">Add song</a>
+    <a href="#" data-toggle="modal" data-target="#exampleModal">Add song</a>
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
@@ -81,11 +81,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </div>
     </div>
-
-
-
-
-
     <!-- End Modal -->
 </body>
 
