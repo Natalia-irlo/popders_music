@@ -134,5 +134,24 @@ ALTER TABLE `song`
   MODIFY `id_song` int(11) NOT NULL AUTO_INCREMENT;
 -- 4.- Clave foránea
 ALTER TABLE `song`
+<<<<<<< HEAD
+  MODIFY `id_song` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `coder`
+--
+ALTER TABLE `coder`
+  ADD CONSTRAINT `selec_fk` FOREIGN KEY (`id_coder`) REFERENCES `song` (`id_song`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+=======
   ADD CONSTRAINT `selec_fk` FOREIGN KEY (`id_coder`) REFERENCES `coder` (`id_coder`);
 COMMIT;
+>>>>>>> 4ed1a87eae4db0faa988a6e59424c45f37a3efcb
