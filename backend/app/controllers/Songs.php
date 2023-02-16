@@ -1,7 +1,10 @@
 <?php
+
 namespace App\Controllers;
+
 use App\Connection\CrudConnection;
-require_once "./vendor/autoload.php";
+
+require_once __DIR__ . '/../../../vendor/autoload.php';
 
 
 class Songs extends CrudConnection
@@ -28,11 +31,16 @@ class Songs extends CrudConnection
     public function addRow($id_coder, $title, $artist, $genre, $url, $date, $status)
     {
         $addRowQuery = "insert into song (id_coder,title,artist,genre,url,date,status) values ('$id_coder','$title' ,'$artist', '$genre', '$url', '$date', '$status')";
-        $resultAdd = $this->connection->query($addRowQuery);
-        echo "Se ha insertado correctamente " . $title . "\n";
-        if ($resultAdd){
+        try {
+            $resultAdd = $this->connection->query($addRowQuery);
+        } catch (\PDOException $ex) {
+            echo $ex->getMessage();
+            $resultAdd = false;
+        }
+
+        if ($resultAdd) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
@@ -45,9 +53,9 @@ class Songs extends CrudConnection
 
         $resultUpdate = $this->connection->query($updateQuery);
         echo "Se ha modificado correctamente el " . $title . "\n";
-        if ($resultUpdate){
+        if ($resultUpdate) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
@@ -57,14 +65,14 @@ class Songs extends CrudConnection
         $deleteQuery = "DELETE FROM song WHERE id_song = '$id_song'";
         $resultDelete = $this->connection->query($deleteQuery);
         echo "Se ha eliminado correctamente " . $id_song . "\n";
-        if ($resultDelete){
+        if ($resultDelete) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
 }
 
 $movement = new Songs;
-$movement->addRow(1,'La bachata', 'Manuel Turizo', 'Bachata','https://www.youtube.com/watch?v=TiM_TFpT_DE','2023-02-15', false);
+$movement->addRow(1, 'La bachata', 'Manuel Turizo', 'Bachata', 'https://www.youtube.com/watch?v=TiM_TFpT_DE', '2023-02-15', false);
 var_dump($movement);
