@@ -18,12 +18,7 @@ body{
     height: 796px;
     margin: auto;
     margin-top: 4%;
-    z-index: -1;
     display: grid;
-}
-
-.drawer{
-    color: #FFFFFF;
 }
 
 .sun{
@@ -31,20 +26,12 @@ body{
     height: 30px;
 }
 
-.date{
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 5%;
-}
-
-.date-time{
-    font-size: 40px;
-    color: #FFBE02;
-}
-
 .home-center{
     display: flex;
     justify-content: center;
+    margin-top: -50%;
+    width: 600px;
+    margin-left: 30%;
 }
 
 .content-title{
@@ -52,10 +39,10 @@ body{
 }
 
 .title-small{
-    color: rgb(231, 27, 194);
+    color:  rgb(255, 216, 239);
     font-size: 40px;
-    font-weight: 400;
-    z-index: 1;
+    font-weight:bold;
+   
 }
 
 .title-big{
@@ -75,11 +62,17 @@ body{
     width: 109px;
     height: 109px;
     border-radius: 100px;
+    transition: all 0.3s ease-in-out;
+}
+
+.small-picture:hover{
+    width: 100px;
 }
 
 .img-footer{
     display: flex;
     justify-content: center;
     justify-content: space-around;
+    margin-top: -15%;
+    margin-left: 10%;
 }
-

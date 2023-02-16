@@ -1,46 +1,41 @@
-#drawer{
-    margin: 10px 20px 0px 0px;
-  }
+.container-drawer{
+  background-color: #FFFFFF ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  border-right: 5px solid;
+  border-image: url(../../assets/img/sean-sinclair-C_NJKfnTR5A-unsplash.jpg);
+  border-image-slice: 1;
+  width: 150px;
+  height: 670px;
+}
 
-  .container-drawer{
-    background-color: antiquewhite ;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    border-right: 5px solid;
-    border-image: url(../../assets/img/sean-sinclair-C_NJKfnTR5A-unsplash.jpg);
-    /* border-image: linear-gradient(to right 96.2deg, rgb(255, 230, 112) 10.4%, rgb(255, 100, 100) 43.8%, rgb(0, 93, 219) 105.8%); */
-    border-image-slice: 1;
-    width: 150px;
-    height: 700px;
-  }
+.icon-logo {
+  margin: 20px;
+  margin-bottom: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
 
-  .icon-logo {
-    margin: 20px;
-    margin-bottom: 50px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-  }
+.icon-logo:hover {
+  width: 100px;
+}
 
-  .icon-logo:hover {
-    width: 100px;
-  }
+.icon {
+  margin: 10px;
+  margin-bottom: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
 
-  .icon {
-    margin: 10px;
-    margin-bottom: 50px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .icon:hover {
-    width: 100px;
-  }
+.icon:hover {
+  width: 100px;
+}
