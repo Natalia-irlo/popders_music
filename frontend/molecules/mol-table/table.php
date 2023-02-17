@@ -1,22 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include '../../../backend/app/connection/CrudConnection.php';
+require "../../../backend/app/controllers/Coders.php";
+require "../../../backend/app/controllers/Songs.php";
 
-<head>
-  <title>Table</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $insertSong->$newCoder = $_POST['coder'];
+    $newTitle = $_POST['titulo'];
+    $newArtist = $_POST['artist'];
+    $newGenre = $_POST['genre'];
+    $newURL = $_POST['url'];;
+}
+
+$newDate = date('Y-m-d H:i:s');
+$newPlayed = false;
+
+$insertSong = new Songs();
+$insertSong->addRow($newCoder, $newTitle, $newArtist, $newGenre, $newURL, $newDate, $newPlayed);
+
+?>
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--css para usar Bootstrap-->
+        <link rel="stylesheet"
+              href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+              <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <link rel="stylesheet" href="../../molecules/mol-date/mol-date-style.css"/>
- 
-</head>
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+          <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+          <link rel="stylesheet" href="../mol-drawer/drawer.css">
+          <link rel="stylesheet" type="text/css" href="../../molecules//mol-table/style.css" />
+          <link rel="stylesheet" href="../../molecules/mol-date/mol-date-style.css"/>
+              
+        <title>table</title>
+    </head>
+    <body>
+    
+        <div class="container-drawer">
+            <a href="" target="_blank" class="nav-link"  aria-current="page">
+              <img class="icon-logo " src="../../assets/icons/logo-popCoder-multicolor.png" width="60px ">
+            </a>
+            <a href="" target="_blank" class="nav-link" aria-current="page">
+                <img class="icon" src="../../assets/icons/icono-musica.png" width="70px">
+            </a>
+            <a href="" target="_blank" class="nav-link" aria-current="page">
+                <img class="icon" src="../../assets/icons/icono-gatito.png" width="70px">
+            </a>
+            <a href="" target="_blank" class="nav-link" aria-current="page">
+                <img class="icon" src="../../assets/icons/icono-patito.png" width="70px">
+            </a>
+            <a href="#" target="_blank" class="nav-link" aria-current="page" >
+                <img class="icon" src="../../assets/icons/icono-user.png" width="70px">
+            </a>
+            
+        </div>
 
-<body>
-<div class="container-home"> 
+    </nav>
+    <div class="container-home"> 
     <header>
       <div class="container"> 
       <ul class="d-flex">
@@ -33,7 +80,7 @@
 
 </header>
 <div class="table-home">
-     <table class="table table-borderless">
+     <table class="table table-borderless" action="table.php" method="post">
      <thead>
        <tr>
        </tr>
@@ -82,10 +129,22 @@
    </div>
             </div>
 </div>
-<script src="../../molecules/mol-date/date.js"></script>
-            
-            
-            
-</body>
 
+    
+        <script src="../../molecules/mol-date/date.js"></script>
+        
+    </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+

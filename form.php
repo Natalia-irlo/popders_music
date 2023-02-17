@@ -5,7 +5,7 @@ use App\Controllers\Songs;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $insertSong->$newCoder = $_POST['coder'];
-    $newTitle = $_POST['titulo'];
+    $newTitle = $_POST['title'];
     $newArtist = $_POST['artist'];
     $newGenre = $_POST['genre'];
     $newURL = $_POST['url'];;

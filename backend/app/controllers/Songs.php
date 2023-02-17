@@ -35,6 +35,8 @@ class Songs extends CrudConnection
         }
     }
 
+    
+
     function updateRow($id_song, $id_coder, $title, $artist, $genre, $url, $date, $status)
     {
         $updateQuery = "UPDATE song
@@ -56,6 +58,27 @@ class Songs extends CrudConnection
         $resultDelete = $this->connection->query($deleteQuery);
         echo "Se ha eliminado correctamente " . $id_song . "\n";
         if ($resultDelete){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+     //--------------------------------------
+    /**
+     * La he añadido para facilitarme las inserciones
+     */
+    public function addRow2($id_coder, $title, $artist, $genre, $url, $date, $status)
+    {
+        $addRowQuery = "insert into song (id_coder,title,artist,genre,url,date,status,img) values ($id_coder,'$title' ,'$artist', '$genre', '$url', '2023-02-14 00:00:00.000000', $status,'defecto')";
+        try {
+            $resultAdd = $this->connection->query($addRowQuery);
+        } catch (\PDOException $ex) {
+            echo $ex->getMessage();
+            $resultAdd = false;
+        }
+
+        if ($resultAdd){
             return true;
         }else {
             return false;

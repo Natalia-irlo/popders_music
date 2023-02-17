@@ -13,7 +13,7 @@ class CrudConnection
     public function connectDatabase()
     {
         try {
-            $conn = new \PDO("mysql:host=localhost;dbname=popders", "root", "");
+            $conn = new \PDO("mysql:host=localhost;dbname=popdersname", "root", "");
             $conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
             echo "Connected successfully";
             return $conn;

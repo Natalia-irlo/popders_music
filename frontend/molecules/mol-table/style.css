@@ -8,22 +8,26 @@ body{
   background-image: url(../../assets/img/background.jpg);
   background-size: 100%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 100px;
+  margin-top: 0px;
 }
 
 .container-home{
   background-color: #FFFFFF;
   opacity: 60%;
-  width: 80vw;
-  height: 65vh;
+  width: 50vw;
+  height: 40vh;
   margin: auto;
-  margin-top: 4%;
+  margin-top: 8%;
   z-index: -1;
   display: grid;
+  position: relative;
+  align-items: center;
   
 }
 .table-home{
-  width: 65vw;
-  height: 80vh;
+  width: 50vw;
+  height: 40vh;
 }
 .date{
   display: flex;
