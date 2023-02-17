@@ -27,10 +27,11 @@ class Coders extends CrudConnection
     public function addRow($name)
     {
         $addRowQuery = "insert into coder (name) values ('$name')";
-        $resultAdd = $this->connection->query($addRowQuery);  
+        $resultAdd = $this->connection->query($addRowQuery);
+        $id_coder = $this->connection->lastInsertId();  
         echo "Se ha insertado correctamente " . $name ."\n";
         if ($resultAdd){                    
-            return true;
+            return $id_coder;
         }else {
             return false;
         }
