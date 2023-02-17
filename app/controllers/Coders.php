@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers;
-
+//require_once "vendor/autoload.php";
 use App\Connection\CrudConnection;
 
 class Coders extends CrudConnection
@@ -64,7 +64,7 @@ class Coders extends CrudConnection
         }
     }
 
-  /*  function existsCoder($name) {
+    function existsCoder($name) {
         $query = "SELECT id_coder FROM coder WHERE name = '{$name}'";
 
         $result = $this->connection->query($query);
@@ -72,5 +72,9 @@ class Coders extends CrudConnection
 
         return $row == false ? false : $row->id_coder;
     }
-     */
+     
 }
+
+// $movement = new Coders;
+// $movement->addRow();
+// var_dump($movement);

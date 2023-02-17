@@ -2,7 +2,7 @@
     "name": "meena/popders_music",
     "autoload": {
         "psr-4": {
-            "App\\":"backend/app/",
+            "App\\":"app/",
             "Front\\":"frontend/"
         }
     },
