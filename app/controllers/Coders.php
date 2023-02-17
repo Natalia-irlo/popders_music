@@ -29,7 +29,7 @@ class Coders extends CrudConnection
         $addRowQuery = "insert into coder (name) values ('$name')";
         $resultAdd = $this->connection->query($addRowQuery);
         $id_coder = $this->connection->lastInsertId();  
-        echo "Se ha insertado correctamente " . $name ."\n";
+        echo '<script>alert("' . $name .' Ha insertado correctamente ")</script>';
         if ($resultAdd){                    
             return $id_coder;
         }else {

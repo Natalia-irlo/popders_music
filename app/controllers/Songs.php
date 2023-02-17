@@ -29,7 +29,7 @@ class Songs extends CrudConnection
     {   
         $addRowQuery = "insert into song (id_coder,title,artist,genre,url,date,status) values ('$id_coder', '$title' ,'$artist', '$genre', '$url', '$date', '$status')";
         $resultAdd = $this->connection->query($addRowQuery);
-        echo "Se ha insertado correctamente " . $title . "\n";
+        echo '<script>alert("La canción '. $title .'")</script>';                   
         if ($resultAdd){
             return $id_coder;
         }else {
