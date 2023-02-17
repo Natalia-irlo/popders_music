@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="popup.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="coders.css">
+    <link rel="stylesheet" href="list.css">
 
 <body>
 <div class="container-coders"> 
@@ -61,7 +61,7 @@
         </div>
     </nav>
 
-    <a href="#" data-toggle="modal" data-target="#exampleModal" class="modal-add"><img src="../../assets/icons/add.png" class="add-song"></a>
+    <a href="#" data-toggle="modal" data-target="#exampleModal" class="modal-add"></a>
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm" role="document">
@@ -110,7 +110,7 @@
                 <br>
                 <tr>
                     <br>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /><img src="../../assets/icons/edit.png" class="icon-edit"/></td>
+                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
                     <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
                 </tr>
                 <tr>

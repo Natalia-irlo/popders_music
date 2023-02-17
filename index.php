@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="home.css">
-    <link rel="stylesheet" href="../../molecules/mol-date/mol-date-style.css"/>
-    <link rel="stylesheet" href="../../molecules/mol-drawer/drawer.css"/>
+    <link rel="stylesheet" type="text/css" href="frontend/views/home/index.css">
+    <link rel="stylesheet" href="frontend/molecules/mol-date/mol-date-style.css"/>
+    <link rel="stylesheet" href="frontend/molecules/mol-drawer/drawer.css"/>
     <title>Document</title>
 </head>
 
@@ -44,27 +44,27 @@
 
         <nav class="" id="drawer">
             <div class="container-drawer">
-                <a href="home.php" target="_blank" class="nav-link"  aria-current="page">
-                <img class="icon-logo" src="../../assets/icons/logo-popCoder-multicolor.png" width="60px">
+                <a href="index.php" target="_blank" class="nav-link"  aria-current="page">
+                <img class="icon-logo" src="frontend/assets/icons/logo-popCoder-multicolor.png" width="60px">
                 </a>
                 <a href="screen.php" target="_blank" class="nav-link" aria-current="page">
-                    <img class="icon" src="../../assets/icons/icono-musica.png" width="70px">
+                    <img class="icon" src="frontend/assets/icons/icono-musica.png" width="70px">
                 </a>
-                <a href="" target="_blank" class="nav-link" aria-current="page">
-                    <img class="icon" src="../../assets/icons/icono-gatito.png" width="70px">
+                <a href="frontend/views/list/list.php" target="_blank" class="nav-link" aria-current="page">
+                    <img class="icon" src="frontend/assets/icons/icono-gatito.png" width="70px">
                 </a>
-                <a href="trainers.php" target="_blank" class="nav-link" aria-current="page">
-                    <img class="icon" src="../../assets/icons/icono-patito.png" width="70px">
+                <a href="frontend/views/trainers/trainers.php" target="_blank" class="nav-link" aria-current="page">
+                    <img class="icon" src="frontend/assets/icons/icono-patito.png" width="70px">
                 </a>
-                <a href="coders.php" target="_blank" class="nav-link" aria-current="page">
-                    <img class="icon" src="../../assets/icons/icono-user.png" width="70px">
+                <a href="frontend/views/coders/coders.php" target="_blank" class="nav-link" aria-current="page">
+                    <img class="icon" src="frontend/assets/icons/icono-user.png" width="70px">
                 </a>                
             </div>
         </nav>  
 
         <div class="home-center">
             <div class="content-piano">
-                <img src="../../assets/img/home.jpg" alt="Piano" class="piano"/>
+                <img src="frontend/assets/img/home.jpg" alt="Piano" class="piano"/>
             </div>
             <div class="content-title">
                 <p class="title-small">-Lunes con L de-</p>
@@ -74,13 +74,13 @@
         </div>
 
         <div class="img-footer">
-            <img src="../../assets/img/austin-neill.jpg" alt="Concert" class="small-picture">
-            <img src="../../assets/img/joshua-fuller.jpg" alt="Girl singing" class="small-picture">
-            <img src="../../assets/img/keagan-henman.jpg" alt="Boy singing" class="small-picture">
-            <img src="../../assets/img/marcela-laskoski.jpg" alt="Dj" class="small-picture">
+            <img src="frontend/assets/img/austin-neill.jpg" alt="Concert" class="small-picture">
+            <img src="frontend/assets/img/joshua-fuller.jpg" alt="Girl singing" class="small-picture">
+            <img src="frontend/assets/img/keagan-henman.jpg" alt="Boy singing" class="small-picture">
+            <img src="frontend/assets/img/marcela-laskoski.jpg" alt="Dj" class="small-picture">
         </div>
     </div>
 
-    <script src="../../molecules/mol-date/date.js"></script>
+    <script src="frontend/molecules/mol-date/date.js"></script>
 </body>
 </html>
