@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+  
+body{
+   /* height: 100vh;*/
+    width: 100vw;
+    background-image: url(../../assets/img/background.jpg);
+    background-size: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 100%;
+    margin-top: 10px;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    margin-right: 5px;
+    color: #FFBE02;
+} 
+  
+.container-coders{
+    background-color: #ffffff9f;
+    /*opacity: 90%;*/
+    width: 1250px;
+    height: 796px;
+    margin: auto;
+    margin-top: 2%;
+    z-index: -1;
+}
+  
+.table-home{
+width: 65vw;
+height: 80vh;   
+margin-left: 17%;
+margin-top: -60%;
+}
+  
+td img{
+margin-top: 8%;
+}
+
+  
+.btn{
+    align-items: center;
+    border-radius: 18%;
+    color: white;
+    width: 110px;
+    height: 30px;
+    background: linear-gradient(0.25turn, #fac832, #fa63d2, #9d74bf, #52e7fb, #357fbd, #2f5efc);
+    }
+    
+.modal-content{
+    background: linear-gradient(#3887b1, #fcfcfc);
+    opacity: .9;
+    width: 350px;  
+    height: auto;
+    margin-top: 150px;        
+}
+
+h1{
+    color: #fcfcfc;
+}
+
+.txt{
+    color:white;
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+}
+
+.plch{
+    height: 20px;
+    width: 230px;
+    position: relative;
+}
+
+.add-song{
+    width: 50px;
+}
+
+a .add-song{
+    margin-left: 5%;
+}
+
+.container-drawer{
+  background-color: #ffffff5a ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  border-right: 5px solid;
+  border-image: url(../../assets/img/sean-sinclair-C_NJKfnTR5A-unsplash.jpg);
+  border-image-slice: 1;
+  width: 150px;
+  height:100%;
+}
+
+.icon-logo {
+  margin: 20px;
+  margin-bottom: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 60px;
+}
+
+.icon-logo:hover {
+  width: 100px;
+}
+
+.icon {
+  margin: 10px;
+  margin-bottom: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon:hover {
+  width: 100px;
+}
+
+#drawer{
+    width: 150px !important;
+    height: 795px;
+    margin-top: -4%;
+}
+
+.modal-add{
+    position: absolute;
+    margin-top: -34%;
+    margin-left: 12%;
+}
+
+.icon-edit{
+    width: 30px;
+    margin-left: 80%;
+    margin-top: -50%;
+}

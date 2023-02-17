@@ -1,15 +1,12 @@
 {
-    "name": "user/popders_music",
+    "name": "meena/popders_music",
     "autoload": {
         "psr-4": {
-            "User\\PopdersMusic\\": "src/"
+            "App\\":"app/",
+            "Front\\":"frontend/"
         }
     },
-    "authors": [
-        {
-            "name": "DianaB177",
-            "email": "anaidb77@gmail.com"
-        }
-    ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    }
 }

@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+  
+body{
+    height: 100%;
+    width: 100vw;
+    background-image: url(../../assets/img/background.jpg);
+    background-size: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 100%;
+    margin-top: 50px;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    margin-right: 5px;
+    color: #FFBE02;
+} 
+  
+.container-coders{
+    background-color: #ffffff9f;
+    /*opacity: 90%;*/
+    width: 1250px;
+    height: 796px;
+    margin: auto;
+    margin-top: 2%;
+    z-index: -1;
+}
+  
+.table-home{
+width: 65vw;
+height: 80vh;   
+margin-left: 17%;
+margin-top: -60%;
+}
+  
+td img{
+margin-top: 8%;
+}
+
+
+.container-drawer{
+  background-color: #ffffff5a ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  border-right: 5px solid;
+  border-image: url(../../assets/img/sean-sinclair-C_NJKfnTR5A-unsplash.jpg);
+  border-image-slice: 1;
+  width: 150px;
+  height: 100%;
+}
+
+.icon-logo {
+  margin: 20px;
+  margin-bottom: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 60px;
+}
+
+.icon-logo:hover {
+  width: 100px;
+}
+
+.icon {
+  margin: 10px;
+  margin-bottom: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon:hover {
+  width: 100px;
+}
+
+#drawer{
+  width: 150px !important;
+  height: 795px;
+  margin-top: -4%;
+}

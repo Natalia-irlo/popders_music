@@ -1,0 +1,41 @@
+.container-drawer{
+  /*background-color: #ffffff5a ;*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  border-right: 5px solid;
+  border-image: url(../../assets/img/sean-sinclair-C_NJKfnTR5A-unsplash.jpg);
+  border-image-slice: 1;
+  width: 150px;
+  height: 670px;
+}
+
+.icon-logo {
+  margin: 20px;
+  margin-bottom: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon-logo:hover {
+  width: 100px;
+}
+
+.icon {
+  margin: 10px;
+  margin-bottom: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon:hover {
+  width: 100px;
+}
