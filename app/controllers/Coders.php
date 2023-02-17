@@ -3,6 +3,7 @@
 namespace App\Controllers;
 //require_once "vendor/autoload.php";
 use App\Connection\CrudConnection;
+use PDO;
 
 class Coders extends CrudConnection
 {

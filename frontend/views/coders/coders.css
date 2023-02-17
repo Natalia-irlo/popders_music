@@ -4,7 +4,7 @@
 }
   
 body{
-    height: 100%;
+   /* height: 100vh;*/
     width: 100vw;
     background-image: url(../../assets/img/background.jpg);
     background-size: 100%;
@@ -16,7 +16,7 @@ body{
     justify-content: end;
     align-items: end;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 ul{
@@ -34,7 +34,7 @@ li{
     width: 1250px;
     height: 796px;
     margin: auto;
-    margin-top: 4%;
+    margin-top: 2%;
     z-index: -1;
 }
   
@@ -42,7 +42,7 @@ li{
 width: 65vw;
 height: 80vh;   
 margin-left: 17%;
-margin-top: -53%;
+margin-top: -60%;
 }
   
 td img{
@@ -101,7 +101,7 @@ a .add-song{
   border-image: url(../../assets/img/sean-sinclair-C_NJKfnTR5A-unsplash.jpg);
   border-image-slice: 1;
   width: 150px;
-  height:796px;
+  height:100%;
 }
 
 .icon-logo {
@@ -137,7 +137,8 @@ a .add-song{
 
 #drawer{
     width: 150px !important;
-    height: 670px !important;
+    height: 795px;
+    margin-top: -4%;
 }
 
 .modal-add{
