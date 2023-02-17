@@ -14,7 +14,7 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" type="text/css" href="home.css">
     <link rel="stylesheet" href="../../molecules/mol-date/mol-date-style.css"/>
-    <link rel="stylesheet" href="../../molecules/mol-drawer/drawer.css">
+    <link rel="stylesheet" href="../../molecules/mol-drawer/drawer.css"/>
     <title>Document</title>
 </head>
 
@@ -44,19 +44,19 @@
 
         <nav class="" id="drawer">
             <div class="container-drawer">
-                <a href="" target="_blank" class="nav-link"  aria-current="page">
+                <a href="home.php" target="_blank" class="nav-link"  aria-current="page">
                 <img class="icon-logo" src="../../assets/icons/logo-popCoder-multicolor.png" width="60px">
                 </a>
-                <a href="" target="_blank" class="nav-link" aria-current="page">
+                <a href="screen.php" target="_blank" class="nav-link" aria-current="page">
                     <img class="icon" src="../../assets/icons/icono-musica.png" width="70px">
                 </a>
                 <a href="" target="_blank" class="nav-link" aria-current="page">
                     <img class="icon" src="../../assets/icons/icono-gatito.png" width="70px">
                 </a>
-                <a href="" target="_blank" class="nav-link" aria-current="page">
+                <a href="trainers.php" target="_blank" class="nav-link" aria-current="page">
                     <img class="icon" src="../../assets/icons/icono-patito.png" width="70px">
                 </a>
-                <a href="" target="_blank" class="nav-link" aria-current="page">
+                <a href="coders.php" target="_blank" class="nav-link" aria-current="page">
                     <img class="icon" src="../../assets/icons/icono-user.png" width="70px">
                 </a>                
             </div>

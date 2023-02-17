@@ -12,8 +12,7 @@ body{
 }
 
 .container-home{
-    background-color: #FFFFFF;
-    opacity: 60%;
+    background-color: #ffffffa0;
     width: 1250px;
     height: 796px;
     margin: auto;
@@ -39,7 +38,7 @@ body{
 }
 
 .title-small{
-    color:  rgb(255, 216, 239);
+    color:  #FFFFFF;
     font-size: 40px;
     font-weight:bold;
    

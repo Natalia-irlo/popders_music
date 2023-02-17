@@ -19,6 +19,7 @@ class SongsTest extends TestCase{
         $rows = $song->getRows();
         $this->assertIsArray($rows);
     }
+    
 
     public function testAddRow()
     {
