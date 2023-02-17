@@ -17,8 +17,10 @@ This project is a platform created to manage the songs to say good morning to th
 ![This is an image]()
 
 ## Tech/framework used :electric_plug:
+* **PHP** - 
 * **PHPUnit** - utilizado para crear la estructura básica de la página web
 * **CSS** - utilizado para estilizar la interfaz de usuario
+* **JavaScript** - utilizado para crear la estructura de la página web
 
 ## Technology stack :gear:
 * Bootstrap: 5.2.3 [Sitio web oficial](https://getbootstrap.com/)
@@ -29,7 +31,7 @@ This project is a platform created to manage the songs to say good morning to th
 * Then, ***$ git clone https://github.com/Natalia-irlo/popders_music.git***
 
 ## How to use? :key:
-* In te project directory run ***$ composer init ***
+* In te project directory run ***$ composer init***
 
 ## Contributors :family_woman_woman_girl_girl:
 * [Sharon Infante](https://github.com/SharonInfante) Scrum Master and Developer
