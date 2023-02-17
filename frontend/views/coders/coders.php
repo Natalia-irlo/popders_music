@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,13 +56,13 @@
             <a href="" target="_blank" class="nav-link" aria-current="page">
                 <img class="icon" src="../../assets/icons/icono-patito.png" width="70px">
             </a>
-            <a href="" target="_blank" class="nav-link" aria-current="page">
+            <a href="" target="_blank" class="nav-link" aria-current="page" data-toggle="modal" data-target="#exampleModal">
                 <img class="icon" src="../../assets/icons/icono-user.png" width="70px">
             </a>            
         </div>
     </nav>
 
-    <a href="#" data-toggle="modal" data-target="#exampleModal" class="modal-add"><img src="../../assets/icons/add.png" class="add-song"></a>
+    <!-- <a href="#" data-toggle="modal" data-target="#exampleModal" class="modal-add"></a> -->
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm" role="document">
