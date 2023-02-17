@@ -3,11 +3,17 @@
 require_once "../../../vendor/autoload.php";
 
 use App\Controllers\Songs;
+use App\Controllers\Coders;
 
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $addIdCoder = filter_input(INPUT_POST, "coder");
+
+    $addNameCoder = filter_input(INPUT_POST, "coder");
+
+    $insertCoder = new Coders;
+    $coders = $insertCoder->addRow($addNameCoder);
+
     $addTitle = filter_input(INPUT_POST, "title");
     $addArtist = filter_input(INPUT_POST, "artist");
     $addGenre = filter_input(INPUT_POST, "genre");
@@ -17,9 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $addPlayed = false;
 
     $insertSong = new Songs;
-    $insertSong->addRow($addIdCoder, $addTitle, $addArtist, $addGenre, $addURL, $addDate, $addPlayed);
+    $insertSong->addRow($coders, $addTitle, $addArtist, $addGenre, $addURL, $addDate, $addPlayed);
 }
-
 
 ?>
 
@@ -55,22 +60,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <h1>Add Song</h1>
                         
                                 <sub class="txt">Coder</sub>&#160;
-                                <input type="text" name="coder" id="r-coder" class="plch" placeholder="">
+                                <input type="text" name="coder" id="coder" class="plch" placeholder="">
                                 <small id="r-msg-pass" class="d-block text-danger"></small><br>
                                 <sub class="txt">Title</sub>&#160;
-                                <input  type="text" name="title" id="r-title" class="plch" placeholder="">
+                                <input  type="text" name="title" id="title" class="plch" placeholder="">
                                 <small id="r-msg-pass" class="d-block text-danger"></small><br>
                                
                                 <sub class="txt">Artista</sub>&#160;
-                                <input type="text" name="artist" id="r-artist" class="plch" placeholder="">
+                                <input type="text" name="artist" id="artist" class="plch" placeholder="">
                                 <small id="r-msg-pass" class="d-block text-danger"></small><br>
                                 
                                 <sub class="txt">Genre</sub>&#160;
-                                <input type="text" name="genre" id="r-genre" class="plch" placeholder="">
+                                <input type="text" name="genre" id="genre" class="plch" placeholder="">
                                 <small id="r-msg-pass" class="d-block text-danger"></small><br>
                               
                                 <sub class="txt">Url</sub>&#160;&emsp;
-                                <input type="text" name="url" id="r-url" class="plch" placeholder="">
+                                <input type="text" name="url" id="url" class="plch" placeholder="">
                                 <small id="r-msg-pass" class="d-block text-danger"></small>
                                 <br>
                                 <button class="btn" type="submit" >Submit</button>

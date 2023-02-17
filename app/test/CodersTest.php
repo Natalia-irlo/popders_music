@@ -37,12 +37,11 @@ class CodersTest extends TestCase{
     {
         $coder = new Coders;
 
-        $datosEntrada = [   
-            "id_coder" => 1,      
+        $datosEntrada = [        
             "name" => "Natalia",             
         ];
     
-        $resultUpdate = $coder->updateRow($datosEntrada["id_coder"], $datosEntrada["name"]);
+        $resultUpdate = $coder->updateRow($datosEntrada["name"]);
         $this->assertTrue($resultUpdate);
     }
 
@@ -51,7 +50,7 @@ class CodersTest extends TestCase{
         $coder = new Coders;
 
         $datosEntrada = [         
-            "id_coder" => 1,             
+            "id_coder" => 5             
         ];
     
         $resultDelete = $coder->deleteRow($datosEntrada["id_coder"]);

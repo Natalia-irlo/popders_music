@@ -1,3 +1,32 @@
+<?php
+
+require_once "../../../vendor/autoload.php";
+
+use App\Controllers\Songs;
+use App\Controllers\Coders;
+
+
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $addNameCoder = filter_input(INPUT_POST, "coder");
+
+    $insertCoder = new Coders;
+    $coders = $insertCoder->addRow($addNameCoder);
+
+    $addTitle = filter_input(INPUT_POST, "title");
+    $addArtist = filter_input(INPUT_POST, "artist");
+    $addGenre = filter_input(INPUT_POST, "genre");
+    $addURL = filter_input(INPUT_POST, "url");
+
+    $addDate = date('Y-m-d H:i:s');
+    $addPlayed = false;
+
+    $insertSong = new Songs;
+    $insertSong->addRow($coders, $addTitle, $addArtist, $addGenre, $addURL, $addDate, $addPlayed);
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -111,7 +140,7 @@
                 <br>
                 <tr>
                     <br>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /><img src="../../assets/icons/edit.png" class="icon-edit"/></td>
+                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
                     <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
                     <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
                 </tr>
