@@ -2,6 +2,7 @@
   margin: 0;
 padding: 0;
 }
+
 body{
   height: 100%;
   width: 100vw;
@@ -12,20 +13,33 @@ body{
   margin-top: 0px;
 }
 
+<<<<<<< HEAD
 .container-home{
   background-color: #FFFFFF;
   opacity: 60%;
   width: 50vw;
   height: 40vh;
+=======
+.container-coders{
+  background-color: #ffffff9f;
+  /*opacity: 90%;*/
+  width: 1250px;
+  height: 796px;
+>>>>>>> e7592b71452d3782e09dac9890f8072a3e1c92ac
   margin: auto;
   margin-top: 8%;
   z-index: -1;
+<<<<<<< HEAD
   display: grid;
   position: relative;
   align-items: center;
   
+=======
+>>>>>>> e7592b71452d3782e09dac9890f8072a3e1c92ac
 }
+
 .table-home{
+<<<<<<< HEAD
   width: 50vw;
   height: 40vh;
 }
@@ -33,16 +47,15 @@ body{
   display: flex;
   justify-content: flex-end;
   margin-right: 5%;
+=======
+  width: 65vw;
+  height: 80vh;
+  margin-left: 8%;
+>>>>>>> e7592b71452d3782e09dac9890f8072a3e1c92ac
 }
 
-.date-time{
-  font-size: 40px;
-  color: #FFBE02;
+td img{
+  margin-top: 8%;
 }
-.container{
-  display: flex;
-    justify-content: center;
-}
-
 
   
