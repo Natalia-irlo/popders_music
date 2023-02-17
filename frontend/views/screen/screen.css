@@ -1,0 +1,76 @@
+body {
+    background-image: url(../../assets/img/sean-sinclair-C_NJKfnTR5A-unsplash.jpg);
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100vw;
+    background-size: 100%;
+}
+
+
+.container-screen {
+    background-color: #ffffff9f;
+    opacity: 90%;
+    width: 100%;
+}
+
+.container-drawer {
+    background-color: #ffffffa2;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    border-right: 5px solid;
+    border-image: url(./img/sean-sinclair-C_NJKfnTR5A-unsplash.jpg);
+    border-image-slice: 1;
+    width: 150px;
+    height: 800px;
+}
+
+.icon-logo {
+    margin: 20px;
+    margin-bottom: 80px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-logo:hover {
+    width: 100px;
+}
+
+.icon {
+    margin: 10px;
+    margin-bottom: 80px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon:hover {
+    width: 100px;
+}
+
+.screen-wv{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 100%;
+    margin-top: 50px;
+}
+ul{
+    list-style: none;
+}
+li{
+    margin-right: 5px;
+    color: #FFBE02;
+}                        
