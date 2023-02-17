@@ -12,7 +12,7 @@
 	<script src="js/video.js"></script>
 	
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="style.css">
 	<title>Video.js</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
 	<main>
 		<div class="contenedor">
 			<video class="fm-video video-js vjs-16-9 vjs-big-play-centered" data-setup="{}" controls id="fm-video">
-				<source src=" " type="video/mp4">
+				<source src="./video.mp4" type="video/mp4">
 			</video>
 		</div>
 	</main>

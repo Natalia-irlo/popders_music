@@ -5,26 +5,45 @@ require_once "../../../vendor/autoload.php";
 use App\Controllers\Songs;
 use App\Controllers\Coders;
 
-
+$insertCoder = new Coders;
+$insertSong = new Songs;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
+    // $addNameCoder = isset($_POST["coder"])? $_POST["coder"]:null;
+    // $addTitle = isset($_POST["title"])? $_POST["title"]:null;
+    // $addArtist= isset($_POST["artist"])? $_POST["artist"]:null;
+    // $addGenre= isset($_POST["genre"])? $_POST["genre"]:null;
+    // $addURL= isset($_POST["url"])? $_POST["url"]:null;
+
     $addNameCoder = filter_input(INPUT_POST, "coder");
-
-    $insertCoder = new Coders;
-    $coders = $insertCoder->addRow($addNameCoder);
-
     $addTitle = filter_input(INPUT_POST, "title");
     $addArtist = filter_input(INPUT_POST, "artist");
     $addGenre = filter_input(INPUT_POST, "genre");
     $addURL = filter_input(INPUT_POST, "url");
 
-    $addDate = date('Y-m-d H:i:s');
-    $addPlayed = false;
+    $id_Coder = $insertCoder->existsCoder($addNameCoder);
 
-    $insertSong = new Songs;
-    $insertSong->addRow($coders, $addTitle, $addArtist, $addGenre, $addURL, $addDate, $addPlayed);
+    if($id_Coder){
+        $go=true;
+    }else{
+        $go = $insertCoder->addRow($addNameCoder);
+    }
+
+    if($go){
+        $id_Coder = $insertCoder->existsCoder($addNameCoder);
+    }else{
+        $go=false;
+    }
+
+    if($go){
+        $addDate =  date("Y-m-d H:i:s");
+        $addPlayed = 0;
+        $insertSong->addRow($id_Coder, $addTitle, $addArtist, $addGenre, $addURL, $addDate, $addPlayed);
+    }
+
 }
+
 
 ?>
 
@@ -60,22 +79,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <h1>Add Song</h1>
                         
                                 <sub class="txt">Coder</sub>&#160;
-                                <input type="text" name="coder" id="coder" class="plch" placeholder="">
+                                <input type="text" name="coder" id="coder" class="plch" placeholder="" required>
                                 <small id="r-msg-pass" class="d-block text-danger"></small><br>
                                 <sub class="txt">Title</sub>&#160;
-                                <input  type="text" name="title" id="title" class="plch" placeholder="">
+                                <input  type="text" name="title" id="title" class="plch" placeholder="" required>
                                 <small id="r-msg-pass" class="d-block text-danger"></small><br>
                                
                                 <sub class="txt">Artista</sub>&#160;
-                                <input type="text" name="artist" id="artist" class="plch" placeholder="">
+                                <input type="text" name="artist" id="artist" class="plch" placeholder="" required>
                                 <small id="r-msg-pass" class="d-block text-danger"></small><br>
                                 
                                 <sub class="txt">Genre</sub>&#160;
-                                <input type="text" name="genre" id="genre" class="plch" placeholder="">
+                                <input type="text" name="genre" id="genre" class="plch" placeholder="" required>
                                 <small id="r-msg-pass" class="d-block text-danger"></small><br>
                               
                                 <sub class="txt">Url</sub>&#160;&emsp;
-                                <input type="text" name="url" id="url" class="plch" placeholder="">
+                                <input type="text" name="url" id="url" class="plch" placeholder="" required>
                                 <small id="r-msg-pass" class="d-block text-danger"></small>
                                 <br>
                                 <button class="btn" type="submit" >Submit</button>
