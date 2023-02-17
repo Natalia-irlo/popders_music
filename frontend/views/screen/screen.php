@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="./mol-date-style.css" />
+    <link rel="stylesheet" href="screen.css" />
     <title>Document</title>
 </head>
 <body>
@@ -43,19 +43,19 @@
     <nav class="nav flex-column" id="drawer">
         <div class="container-drawer">
             <a href="" target="_blank" class="nav-link"  aria-current="page">
-              <img class="icon-logo " src="./img/logo-popCoder-multicolor.png" width="60px">
+              <img class="icon-logo " src="../../assets/icons/logo-popCoder-multicolor.png" width="60px">
             </a>
             <a href="" target="_blank" class="nav-link" aria-current="page">
-                <img class="icon" src="./img/icono-musica.png" width="70px">
+                <img class="icon" src="../../assets/icons/icono-musica.png" width="70px">
             </a>
             <a href="" target="_blank" class="nav-link" aria-current="page">
-                <img class="icon" src="./img/icono-gatito.png" width="70px">
+                <img class="icon" src="../../assets/icons/icono-gatito.png" width="70px">
             </a>
             <a href="" target="_blank" class="nav-link" aria-current="page">
-                <img class="icon" src="./img/icono-patito.png" width="70px">
+                <img class="icon" src="../../assets/icons/icono-patito.png" width="70px">
             </a>
             <a href="" target="_blank" class="nav-link" aria-current="page">
-                <img class="icon" src="./img/icono-user.png" width="70px">
+                <img class="icon" src="../../assets/icons/icono-user.png" width="70px">
             </a>
         </div>
     </nav>
@@ -73,6 +73,7 @@
                 fluid: true
             });
         </script>
+        <script src="../../molecules/mol-date/date.js"></script>
     </div>
     </div>
 </body>
