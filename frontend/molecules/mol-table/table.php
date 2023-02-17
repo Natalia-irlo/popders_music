@@ -1,23 +1,4 @@
-<?php
-include '../../../backend/app/connection/CrudConnection.php';
-require "../../../backend/app/controllers/Coders.php";
-require "../../../backend/app/controllers/Songs.php";
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $insertSong->$newCoder = $_POST['coder'];
-    $newTitle = $_POST['titulo'];
-    $newArtist = $_POST['artist'];
-    $newGenre = $_POST['genre'];
-    $newURL = $_POST['url'];;
-}
-
-$newDate = date('Y-m-d H:i:s');
-$newPlayed = false;
-
-$insertSong = new Songs();
-$insertSong->addRow($newCoder, $newTitle, $newArtist, $newGenre, $newURL, $newDate, $newPlayed);
-
-?>
 
 <!doctype html>
 <html lang="es">

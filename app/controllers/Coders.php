@@ -69,7 +69,7 @@ class Coders extends CrudConnection
         $query = "SELECT id_coder FROM coder WHERE name = '{$name}'";
 
         $result = $this->connection->query($query);
-        $row = $result->fetch(PDO::FETCH_OBJ);
+        $row = $result->fetch(\PDO::FETCH_OBJ);
 
         return $row == false ? false : $row->id_coder;
     }
