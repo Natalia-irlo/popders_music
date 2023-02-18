@@ -1,3 +1,13 @@
+<?php
+
+require_once('C:\xampp\htdocs\popders_music\vendor\autoload.php');
+
+//require_once "../../../vendor/autoload.php";
+
+use App\Controllers\Songs;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -110,56 +120,19 @@
         <div class="table-home">
             <table class="table table-borderless" id="songs-table">
                 <tbody>
-                    <tr>
-                        <td>
-                            <img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" />
-                            <p>Flowers</p>
-                            <p>Miley Cirus</p>
-                        </td>
-                        <td>
-                            <img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" />
-                            <p>In the end</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" />
-                            <p>Hello</p>
-                        </td>
-                        <td>
-                            <img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" />
-                            <p>Flowers</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" />
-                            <p>Misery</p>
-                        </td>
-                        <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" />
-                            <p>Allelujah</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" />
-                            <p>Waka waka</p>
-                        </td>
-                        <td>
-                            <img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" />
-                            <p>Toxic</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" />
-                            <p>Somebody that I used to know</p>
-                        </td>
-                        <td>
-                            <img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" />
-                            <p>La Macarena</p>
-                        </td>
-                    </tr>
+                    <?php
+                    $song = new Songs();
+                    $list = $song->getRows();
+                    foreach ($list as $row) {
+                    ?>
+                        <tr>
+                            <td>
+                                <img class="Dos sm-2" src="../../assets/img/coder.png" height="60px" />
+                                <p><?php echo $row[0]; ?></p>
+                                <p><?php echo $row[1]; ?></p>
+                            </td>
+                        </tr>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>
