@@ -1,3 +1,12 @@
+<?php
+require_once "../../../vendor/autoload.php";
+
+//require_once "../../../vendor/autoload.php";
+
+use App\Controllers\Songs;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +17,6 @@
 	<link href="https://vjs.zencdn.net/7.2/video-js.min.css" rel="stylesheet"> 
 	<script src="https://vjs.zencdn.net/7.2/video.min.js"></script> 
     <script src="http://www.youtube.com/player_api"></script>
-	<link rel="stylesheet" href="css/video-js.css">
 	<script src="js/video.js"></script>
 	
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
@@ -16,15 +24,15 @@
 	<title>Video.js</title>
 </head>
 <body>
+
 <?php
-use App\Controllers\Songs;
-
-$movement = new Songs;
-
-$url = $movement->$this->connection->getAttribute(PDO::ATTR_DRIVER_NAME) . ':host=' . $movement->$this->connection->getAttribute(PDO::ATTR_SERVER_NAME) . ';dbname=' . $movement->$this->connection->getAttribute(PDO::ATTR_DBNAME);
-
-?>
-<img src="<?php echo $url; ?>" alt="Database URL">
+            $song = new Songs;
+            $dataUrl = $song->getRows();
+            for ($i = 0; $i < 4; $i++) {
+                $row =  $dataUrl[$i];
+                $url = $row[2];
+            }
+            ?>
 
 	<main>
 		<div class="contenedor">

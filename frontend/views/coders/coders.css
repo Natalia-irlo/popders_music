@@ -152,3 +152,10 @@ a .add-song{
     margin-left: 80%;
     margin-top: -50%;
 }
+
+.song{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(35, 8, 122);
+    font-weight: 400;
+    font-size: 0.8rem;
+}

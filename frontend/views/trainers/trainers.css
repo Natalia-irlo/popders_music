@@ -98,3 +98,10 @@ margin-top: 8%;
   height: 795px;
   margin-top: -4%;
 }
+
+.song{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(35, 8, 122);
+  font-weight: 400;
+  font-size: 0.8rem;
+}
