@@ -6,23 +6,42 @@ use App\Controllers\Songs;
 use App\Controllers\Coders;
 
 
+$insertCoder = new Coders;
+$insertSong = new Songs;
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
+    // $addNameCoder = isset($_POST["coder"])? $_POST["coder"]:null;
+    // $addTitle = isset($_POST["title"])? $_POST["title"]:null;
+    // $addArtist= isset($_POST["artist"])? $_POST["artist"]:null;
+    // $addGenre= isset($_POST["genre"])? $_POST["genre"]:null;
+    // $addURL= isset($_POST["url"])? $_POST["url"]:null;
+
     $addNameCoder = filter_input(INPUT_POST, "coder");
-
-    $insertCoder = new Coders;
-    $coders = $insertCoder->addRow($addNameCoder);
-
     $addTitle = filter_input(INPUT_POST, "title");
     $addArtist = filter_input(INPUT_POST, "artist");
     $addGenre = filter_input(INPUT_POST, "genre");
     $addURL = filter_input(INPUT_POST, "url");
 
-    $addDate = date('Y-m-d H:i:s');
-    $addPlayed = false;
+    $id_Coder = $insertCoder->existsCoder($addNameCoder);
 
-    $insertSong = new Songs;
-    $insertSong->addRow($coders, $addTitle, $addArtist, $addGenre, $addURL, $addDate, $addPlayed);
+    if($id_Coder){
+        $go=true;
+    }else{
+        $go = $insertCoder->addRow($addNameCoder);
+    }
+
+    if($go){
+        $id_Coder = $insertCoder->existsCoder($addNameCoder);
+    }else{
+        $go=false;
+    }
+
+    if($go){
+        $addDate =  date("Y-m-d H:i:s");
+        $addPlayed = 0;
+        $insertSong->addRow($id_Coder, $addTitle, $addArtist, $addGenre, $addURL, $addDate, $addPlayed);
+    }    
 }
 
 ?>

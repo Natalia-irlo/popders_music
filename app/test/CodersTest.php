@@ -30,7 +30,7 @@ class CodersTest extends TestCase{
         ];
     
         $resultAdd = $coder->addRow($datosEntrada["name"]);
-        $this->assertTrue($resultAdd);
+        $this->assertNotFalse($resultAdd);
     }
 
     public function testUpdateRow()
