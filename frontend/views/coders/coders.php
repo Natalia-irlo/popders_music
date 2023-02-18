@@ -149,43 +149,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <div class="table-home">
-        <table class="table table-borderless">
-            <thead>
-            <tr>
-            </tr>
-            </thead>
+        <table class="table table-borderless" id="songs-table">
             <tbody>
-                <br>
-                <tr>
-                    <br>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                </tr>
-                <tr>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                </tr>
-                <tr>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                </tr>
-                <tr>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                </tr>
-                <tr>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                </tr>
+                <?php
+                $song = new Songs();
+                $list = $song->getRows();
+                for ($i = 0; $i < 3; $i++) {
+                    $row = $list[$i];
+                ?>
+                <td>
+                    <img class="Dos sm-2" src="../../assets/img/coder.png" height="60px" />
+                    <p class='song'><?php echo $row[0]; ?></p>
+                    <p class='song'><?php echo $row[1]; ?></p>
+                    <p class='song'><?php echo $row[2]; ?></p>
+                </td>
+                <?php } ?>
             </tbody>
         </table>
     </div>    
 </div>
-<script src="../../molecules/mol-date/date.js"></script>     
+<script src="../../molecules/mol-date/date.js"></script> 
+<script src="frontend/views/list/searchBar.js"></script>     
 </body>
 </html>

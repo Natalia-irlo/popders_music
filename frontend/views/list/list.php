@@ -1,6 +1,6 @@
 <?php
 
-require_once('C:\xampp\htdocs\popders_music\vendor\autoload.php');
+require_once "../../../vendor/autoload.php";;
 
 //require_once "../../../vendor/autoload.php";
 
@@ -135,8 +135,9 @@ use App\Controllers\Songs;
                     ?>
                     <td>
                         <img class="Dos sm-2" src="../../assets/img/coder.png" height="60px" />
-                        <p><?php echo $row[0]; ?></p>
-                        <p><?php echo $row[1]; ?></p>
+                        <p class='song'><?php echo $row[0]; ?></p>
+                        <p class='song'><?php echo $row[1]; ?></p>
+                        <p class='song'><?php echo $row[2]; ?></p>
                     </td>
                     <?php } ?>
                 </tbody>
@@ -144,7 +145,7 @@ use App\Controllers\Songs;
         </div>
     </div>
     <script src="../../molecules/mol-date/date.js"></script>
-    <script src="./searchBar.js"></script>
+    <script src="searchBar.js"></script>
 </body>
 
 </html>
