@@ -13,7 +13,12 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"/>
+    <link href="https://vjs.zencdn.net/7.2/video-js.min.css" rel="stylesheet"> 
+	<script src="https://vjs.zencdn.net/7.2/video.min.js"></script> 
+    <script src="http://www.youtube.com/player_api"></script>
+	<link rel="stylesheet" href="css/video-js.css">
+	<script src="js/video.js"></script>
     <link rel="stylesheet" href="screen.css" />
     <title>Document</title>
 </head>
@@ -63,7 +68,7 @@
         <main>
             <div class="contenedor">
                 <video class="fm-video video-js vjs-16-9 vjs-big-play-centered" data-setup="{}" controls id="fm-video">
-                    <source src=" " type="video/mp4">
+                    <source src="./video.mp4" type="video/mp4">
                 </video>
             </div>
         </main>

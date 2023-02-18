@@ -16,12 +16,20 @@
 	<title>Video.js</title>
 </head>
 <body>
+<?php
+use App\Controllers\Songs;
 
+$movement = new Songs;
+
+$url = $movement->$this->connection->getAttribute(PDO::ATTR_DRIVER_NAME) . ':host=' . $movement->$this->connection->getAttribute(PDO::ATTR_SERVER_NAME) . ';dbname=' . $movement->$this->connection->getAttribute(PDO::ATTR_DBNAME);
+
+?>
+<img src="<?php echo $url; ?>" alt="Database URL">
 
 	<main>
 		<div class="contenedor">
 			<video class="fm-video video-js vjs-16-9 vjs-big-play-centered" data-setup="{}" controls id="fm-video">
-				<source src="./video.mp4" type="video/mp4">
+				<source src="<?php echo $url; ?>" alt="Database URL" type="video/mp4">
 			</video>
 		</div>
 	</main>
