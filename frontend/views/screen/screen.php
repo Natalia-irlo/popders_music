@@ -55,7 +55,7 @@ use App\Controllers\Songs;
     <nav class="nav flex-column" id="drawer">
         <div class="container-drawer">
             <a href="../home/index.php" target="_self" class="nav-link"  aria-current="page">
-              <img class="icon-logo " src="../../assets/icons/logo-popCoder-multicolor.png" width="10px">
+              <img class="icon-logo " src="../../assets/icons/logo-popCoder-multicolor.png" width="70px">
             </a>
             <a href="../screen/screen.php" target="_self" class="nav-link" aria-current="page">
                 <img class="icon" src="../../assets/icons/icono-musica.png" width="70px">

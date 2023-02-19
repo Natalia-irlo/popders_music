@@ -25,23 +25,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $id_Coder = $insertCoder->existsCoder($addNameCoder);
 
-    if($id_Coder){
-        $go=true;
-    }else{
+    if ($id_Coder) {
+        $go = true;
+    } else {
         $go = $insertCoder->addRow($addNameCoder);
     }
 
-    if($go){
+    if ($go) {
         $id_Coder = $insertCoder->existsCoder($addNameCoder);
-    }else{
-        $go=false;
+    } else {
+        $go = false;
     }
 
-    if($go){
+    if ($go) {
         $addDate =  date("Y-m-d H:i:s");
         $addPlayed = 0;
         $insertSong->addRow($id_Coder, $addTitle, $addArtist, $addGenre, $addURL, $addDate, $addPlayed);
-    }    
+    }
 }
 
 ?>
@@ -55,16 +55,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" type="text/css" href="popup.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -78,10 +74,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <ul class="d-flex">
                     <li><span id="search-form" class="geolocations col-2">
                             <a href="#" id="geolocation">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#FFBE02"
-                                    class="bi bi-geo-alt-fill text-center" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#FFBE02" class="bi bi-geo-alt-fill text-center" viewBox="0 0 16 16">
+                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
                                 </svg>
                             </a>
                         </span>
@@ -94,8 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </ul>
             </div>
             <div id="display"></div>
-
-            <!-- Search bar -->
+              <!-- Search bar -->
             <div class="content-search">
                 <input type="text" placeholder="Escribe un título" class="search" id="search-input">
                 <img src="../../assets/icons/search.png" class="icon-search" id="search-button" />
@@ -117,8 +110,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <img class="icon" src="../../assets/icons/icono-patito.png" width="70px">
                 </a>
                 <a href="../list/list.php" target="_self" class="nav-link" aria-current="page" data-toggle="modal" data-target="#exampleModal">
-                <img class="icon" src="../../assets/icons/icono-user.png" width="70px">
-            </a>
+                    <img class="icon" src="../../assets/icons/icono-user.png" width="70px">
+                </a>
             </div>
         </nav>
 
@@ -170,12 +163,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     for ($i = 0; $i < 3; $i++) {
                         $row = $list[$i];
                     ?>
-                    <td>
-                        <img class="Dos sm-2" src="../../assets/img/coder.png" height="60px" />
-                        <p class='song'><?php echo $row[0]; ?></p>
-                        <p class='song'><?php echo $row[1]; ?></p>
-                        <p class='song'><?php echo $row[2]; ?></p>
-                    </td>
+                        <td>
+                            <img class="Dos sm-2" src="../../assets/img/coder.png" height="60px" />
+                            <p class='song'><?php echo $row[0]; ?></p>
+                            <p class='song'><?php echo $row[1]; ?></p>
+                            <p class='song'><?php echo $row[2]; ?></p>
+                        </td>
                     <?php } ?>
                 </tbody>
             </table>
