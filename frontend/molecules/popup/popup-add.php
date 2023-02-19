@@ -34,25 +34,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $addDate =  date("Y-m-d H:i:s");
         $addPlayed = 0;
 
-        // $refacUrl     = strlen($addURL);
-        // if ($refacUrl == '28') {
-        //     $cutUrl             = str_replace('https://youtu.be/', '', $addURL);
-        //     $url         = 'https://www.youtube.com/embed/' . $cutUrl;
-        // } elseif ($refacUrl == '41') {
-        //     $cutUrl = str_replace('https://m.youtube.com/watch?v=', '', $addURL);
-        //     $url = 'https://www.youtube.com/embed/' . $cutUrl;
-        // } elseif ($refacUrl == '43') {
-        //     $cutUrl = str_replace('https://www.youtube.com/watch?v=', '', $addURL);
-        //     $url = 'https://www.youtube.com/embed/' . $cutUrl;
-        // } elseif ($refacUrl == '58') {
-        //     $cutUrl = str_replace('https://m.youtube.com/watch?v=', '', $addURL);
-        //     $url = 'https://www.youtube.com/embed/' . $cutUrl;
-        // } elseif ($refacUrl == '60') {
-        //     $cutUrl = str_replace('https://www.youtube.com/watch?v=', '', $addURL);
-        //     $url = 'https://www.youtube.com/embed/' . $cutUrl;
-        // } else {
-        //     echo "URL INVALIDA";
-        // }
 
         $insertSong->addRow($id_Coder, $addTitle, $addArtist, $addGenre, $addURL, $addDate, $addPlayed);
     }
