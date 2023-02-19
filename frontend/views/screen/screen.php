@@ -20,15 +20,10 @@ use App\Controllers\Songs;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <script src="https://unpkg.com/axios/dist/axios.min.js" />
-
-    // <link href="https://vjs.zencdn.net/7.2/video-js.min.css" rel="stylesheet">
-    // <script src="https://vjs.zencdn.net/7.2/video.min.js"></script>
     <link rel="stylesheet" href="css/video-js.css">
-	<script src="js/video.js"></script>
+    <script src="js/video.js"></script>
     <link rel="stylesheet" href="./screen.css">
     <title>Document</title>
 </head>
@@ -77,28 +72,26 @@ use App\Controllers\Songs;
             <?php
             $song = new Songs;
             $dataUrl = $song->getRows();
-            for ($i = 0; $i < 3; $i++) {
-                $row =  $dataUrl[$i];
-                $url = $row[2];
-            }
+            // for ($i = 0; $i < 1; $i++) {
+            //     $row =  $dataUrl[$i];
+            //     $url = $row[2];
+            // }
+            $row =  $dataUrl[2];
+            echo $row[2];
             ?>
-            <main>
-                <div class="contenedor">
-                    <video  data-setup="{}" controls id="fm-video">
-                        <source src="<?php echo $url; ?>" alt="Database URL" type="video/mp4">
-                    </video>
+            <div class="row text-center">
+                <div class="col-6">
+                <div class="video-responsive">
+                            <iframe src="<?php echo $row[2]; ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                            </iframe>
+                        </div>
                 </div>
-            </main>
 
-            <!-- <script>
-                let reproductor = videojs('fm-video', {
-                    fluid: true
-                });
-            </script> -->
+                <div class="col-6 text-center">
+                   
+                </div>
+            </div>
             <script src="../../molecules/mol-date/date.js"></script>
-            
-            
-
         </div>
     </div>
 </body>

@@ -28,7 +28,7 @@ use App\Controllers\Songs;
 <?php
             $song = new Songs;
             $dataUrl = $song->getRows();
-            for ($i = 0; $i < 4; $i++) {
+            for ($i = 0; $i < 1; $i++) {
                 $row =  $dataUrl[$i];
                 $url = $row[2];
             }
@@ -37,7 +37,7 @@ use App\Controllers\Songs;
 	<main>
 		<div class="contenedor">
 			<video class="fm-video video-js vjs-16-9 vjs-big-play-centered" data-setup="{}" controls id="fm-video">
-				<source src="<?php echo $url; ?>" alt="Database URL" type="video/mp4">
+				<source src="<?php echo $url[2]; ?>" alt="Database URL" type="video/mp4">
 			</video>
 		</div>
 	</main>
