@@ -109,9 +109,9 @@ $line3 = ltrim($lines2and3_formatted, $line2);
                 <img src="../../assets/img/home.jpg" alt="Piano" class="piano"/>
             </div>
             <div class="content-title">
-                <p class="title-small">-Lunes con L de-</p>
-                <h1 class="title-big">Lograr</h1>
-                <p class="title-small">Todos tus objetivos</p>
+                <p class="title-small"> <?php echo $line1; ?> </p>
+                <h1 class="title-big"><?php echo $line2; ?></h1>
+                <p class="title-small"><?php echo $line3; ?></p>
             </div>
         </div>
 
