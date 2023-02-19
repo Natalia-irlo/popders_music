@@ -1,3 +1,45 @@
+<?php
+
+function getPhrase()
+{
+    $current_day = date('l');
+
+    $motivation = [
+        'Lunes con L de:Lograr tus objetivos',
+        'Martes con M de:Magnífico día para todas',
+        'Miércoles con M de:Mitad de semana, ¡vamos!',
+        'Jueves con J de:Jamás rendirte',
+        'Viernes con V de:Vámonos de juerga',
+        'Sábado con s de:Sonríele a la vida',
+        'Domingo con D de:Duerme todo el día'
+    ];
+
+    if ($current_day == "Monday") {
+        $phrase = $motivation[0];
+    } elseif ($current_day == "Tuesday") {
+        $phrase = $motivation[1];
+    } elseif ($current_day == "Wednesday") {
+        $phrase = $motivation[2];
+    } elseif ($current_day == "Thursday") {
+        $phrase = $motivation[3];
+    } elseif ($current_day == "Friday") {
+        $phrase = $motivation[4];
+    } elseif ($current_day == "Saturday") {
+        $phrase = $motivation[5];
+    } else {
+        $phrase = $motivation[6];
+    }
+    return $phrase;
+}
+
+$phrase = getPhrase();
+$line1 = strtok($phrase, ":");
+$lines2and3 = strstr($phrase, ":");
+$lines2and3_formatted = strtok($lines2and3, ":");
+$line2 = strtok($lines2and3_formatted, " ");
+$line3 = ltrim($lines2and3_formatted, $line2);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
