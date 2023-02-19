@@ -31,43 +31,46 @@ use App\Controllers\Songs;
 <body>
     <div class="container">
         <ul class="d-flex">
-            <li><span id="search-form" class="geolocations col-2">
-                    <a href="#" id="geolocation">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#FFBE02" class="bi bi-geo-alt-fill text-center" viewBox="0 0 16 16">
-                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-                        </svg>
-                    </a>
-                </span>
-            </li>
-            <li id="city" class="city"></li>
-            <li id="fa-duotone fa-gear"></i>
-            <li><img src=" " id="weather-icon" width="35px" /></li>
-            <li id="degrees">ºC</li>
-            <li id="date"></li>
-        </ul>
-    </div>
+               <li><span id="search-form" class="geolocations col-2">
+                      <a href="#" id="geolocation">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#FFBE02"
+                           class="bi bi-geo-alt-fill text-center" viewBox="0 0 16 16">
+                           <path
+                               d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                       </svg>
+                     </a>
+                   </span>
+               </li>
+               <li id="city" class="city"></li>
+               <li id="fa-duotone fa-gear"></i>
+               <li ><img src=" " id="weather-icon" width="35px" /></li>
+               <li id="degrees">ºC</li>
+               <li id="date"></li>
+           </ul>
+   </div>
+   
     <div id="display"></div>
     <script src="./date.js"></script>
     <div class="screen-wv">
-        <nav class="nav flex-column" id="drawer">
-            <div class="container-drawer">
-                <a href="" target="_blank" class="nav-link" aria-current="page">
-                    <img class="icon-logo " src="../../assets/icons/logo-popCoder-multicolor.png" width="60px">
-                </a>
-                <a href="" target="_blank" class="nav-link" aria-current="page">
-                    <img class="icon" src="../../assets/icons/icono-musica.png" width="70px">
-                </a>
-                <a href="" target="_blank" class="nav-link" aria-current="page">
-                    <img class="icon" src="../../assets/icons/icono-gatito.png" width="70px">
-                </a>
-                <a href="" target="_blank" class="nav-link" aria-current="page">
-                    <img class="icon" src="../../assets/icons/icono-patito.png" width="70px">
-                </a>
-                <a href="" target="_blank" class="nav-link" aria-current="page">
-                    <img class="icon" src="../../assets/icons/icono-user.png" width="70px">
-                </a>
-            </div>
-        </nav>
+    <nav class="nav flex-column" id="drawer">
+        <div class="container-drawer">
+            <a href="../home/index.php" target="_self" class="nav-link"  aria-current="page">
+              <img class="icon-logo " src="../../assets/icons/logo-popCoder-multicolor.png" width="10px">
+            </a>
+            <a href="../screen/screen.php" target="_self" class="nav-link" aria-current="page">
+                <img class="icon" src="../../assets/icons/icono-musica.png" width="70px">
+            </a>
+            <a href="../list/list.php" target="_self" class="nav-link" aria-current="page">
+                <img class="icon" src="../../assets/icons/icono-gatito.png" width="70px">
+            </a>
+            <a href="../trainers/trainers.php" target="_self" class="nav-link" aria-current="page">
+                <img class="icon" src="../../assets/icons/icono-patito.png" width="70px">
+            </a>
+            <a href="../list/list.php" target="_self" class="nav-link" aria-current="page" data-toggle="modal" data-target="#exampleModal">
+                <img class="icon" src="../../assets/icons/icono-user.png" width="70px">
+            </a>            
+        </div>
+    </nav>
         <div class="container-screen">
             <?php
             $song = new Songs;

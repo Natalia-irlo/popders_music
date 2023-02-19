@@ -50,23 +50,28 @@ use App\Controllers\Songs;
             </ul>
         </div>
       <div id="display"></div>
+        <!-- Search bar -->
+        <div class="content-search">
+                <input type="text" placeholder="Escribe un título" class="search" id="search-input">
+                <img src="../../assets/icons/search.png" class="icon-search" id="search-button" />
+            </div>
     </header>
 
     <nav class="nav flex-column" id="drawer">
         <div class="container-drawer">
-            <a href="" target="_blank" class="nav-link"  aria-current="page">
+            <a href="../home/index.php" target="_self" class="nav-link"  aria-current="page">
               <img class="icon-logo " src="../../assets/icons/logo-popCoder-multicolor.png" width="10px">
             </a>
-            <a href="" target="_blank" class="nav-link" aria-current="page">
+            <a href="../screen/screen.php" target="_self" class="nav-link" aria-current="page">
                 <img class="icon" src="../../assets/icons/icono-musica.png" width="70px">
             </a>
-            <a href="" target="_blank" class="nav-link" aria-current="page">
+            <a href="../list/list.php" target="_self" class="nav-link" aria-current="page">
                 <img class="icon" src="../../assets/icons/icono-gatito.png" width="70px">
             </a>
-            <a href="" target="_blank" class="nav-link" aria-current="page">
+            <a href="../trainers/trainers.php" target="_self" class="nav-link" aria-current="page">
                 <img class="icon" src="../../assets/icons/icono-patito.png" width="70px">
             </a>
-            <a href="" target="_blank" class="nav-link" aria-current="page">
+            <a href="../list/list.php" target="_self" class="nav-link" aria-current="page">
                 <img class="icon" src="../../assets/icons/icono-user.png" width="70px">
             </a>            
         </div>
@@ -93,6 +98,6 @@ use App\Controllers\Songs;
     </div>       
 </div>
 <script src="../../molecules/mol-date/date.js"></script>
-<script src="frontend/views/list/searchBar.js"></script>     
+<script src="../list/searchBar.js"></script>     
 </body>
 </html>

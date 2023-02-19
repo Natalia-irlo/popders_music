@@ -1,10 +1,48 @@
 <?php
 
-require_once "../../../vendor/autoload.php";;
-
-//require_once "../../../vendor/autoload.php";
+require_once "../../../vendor/autoload.php";
 
 use App\Controllers\Songs;
+use App\Controllers\Coders;
+
+
+$insertCoder = new Coders;
+$insertSong = new Songs;
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    // $addNameCoder = isset($_POST["coder"])? $_POST["coder"]:null;
+    // $addTitle = isset($_POST["title"])? $_POST["title"]:null;
+    // $addArtist= isset($_POST["artist"])? $_POST["artist"]:null;
+    // $addGenre= isset($_POST["genre"])? $_POST["genre"]:null;
+    // $addURL= isset($_POST["url"])? $_POST["url"]:null;
+
+    $addNameCoder = filter_input(INPUT_POST, "coder");
+    $addTitle = filter_input(INPUT_POST, "title");
+    $addArtist = filter_input(INPUT_POST, "artist");
+    $addGenre = filter_input(INPUT_POST, "genre");
+    $addURL = filter_input(INPUT_POST, "url");
+
+    $id_Coder = $insertCoder->existsCoder($addNameCoder);
+
+    if($id_Coder){
+        $go=true;
+    }else{
+        $go = $insertCoder->addRow($addNameCoder);
+    }
+
+    if($go){
+        $id_Coder = $insertCoder->existsCoder($addNameCoder);
+    }else{
+        $go=false;
+    }
+
+    if($go){
+        $addDate =  date("Y-m-d H:i:s");
+        $addPlayed = 0;
+        $insertSong->addRow($id_Coder, $addTitle, $addArtist, $addGenre, $addURL, $addDate, $addPlayed);
+    }    
+}
 
 ?>
 
@@ -66,28 +104,27 @@ use App\Controllers\Songs;
 
         <nav class="nav flex-column" id="drawer">
             <div class="container-drawer">
-                <a href="" target="_blank" class="nav-link" aria-current="page">
+                <a href="../home/index.php" target="_self" class="nav-link" aria-current="page">
                     <img class="icon-logo " src="../../assets/icons/logo-popCoder-multicolor.png" width="10px">
                 </a>
-                <a href="" target="_blank" class="nav-link" aria-current="page">
+                <a href="../screen/screen.php" target="_self" class="nav-link" aria-current="page">
                     <img class="icon" src="../../assets/icons/icono-musica.png" width="70px">
                 </a>
-                <a href="" target="_blank" class="nav-link" aria-current="page">
+                <a href="../list/list.php" target="_self" class="nav-link" aria-current="page">
                     <img class="icon" src="../../assets/icons/icono-gatito.png" width="70px">
                 </a>
-                <a href="" target="_blank" class="nav-link" aria-current="page">
+                <a href="../trainers/trainers.php" target="_self" class="nav-link" aria-current="page">
                     <img class="icon" src="../../assets/icons/icono-patito.png" width="70px">
                 </a>
-                <a href="" target="_blank" class="nav-link" aria-current="page">
-                    <img class="icon" src="../../assets/icons/icono-user.png" width="70px">
-                </a>
+                <a href="../list/list.php" target="_self" class="nav-link" aria-current="page" data-toggle="modal" data-target="#exampleModal">
+                <img class="icon" src="../../assets/icons/icono-user.png" width="70px">
+            </a>
             </div>
         </nav>
 
-        <a href="#" data-toggle="modal" data-target="#exampleModal" class="modal-add"></a>
+        <!-- <a href="#" data-toggle="modal" data-target="#exampleModal" class="modal-add"></a> -->
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
                     <div class="modal-header-sm">

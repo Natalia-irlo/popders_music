@@ -1,3 +1,45 @@
+<?php
+
+function getPhrase()
+{
+    $current_day = date('l');
+
+    $motivation = [
+        'Lunes con L de:Lograr tus objetivos',
+        'Martes con M de:Magnífico día para todas',
+        'Miércoles con M de:Mitad de semana, ¡vamos!',
+        'Jueves con J de:Jamás rendirte',
+        'Viernes con V de:Vámonos de juerga',
+        'Sábado con s de:Sonríele a la vida',
+        'Domingo con D de:Duerme todo el día'
+    ];
+
+    if ($current_day == "Monday") {
+        $phrase = $motivation[0];
+    } elseif ($current_day == "Tuesday") {
+        $phrase = $motivation[1];
+    } elseif ($current_day == "Wednesday") {
+        $phrase = $motivation[2];
+    } elseif ($current_day == "Thursday") {
+        $phrase = $motivation[3];
+    } elseif ($current_day == "Friday") {
+        $phrase = $motivation[4];
+    } elseif ($current_day == "Saturday") {
+        $phrase = $motivation[5];
+    } else {
+        $phrase = $motivation[6];
+    }
+    return $phrase;
+}
+
+$phrase = getPhrase();
+$line1 = strtok($phrase, ":");
+$lines2and3 = strstr($phrase, ":");
+$lines2and3_formatted = strtok($lines2and3, ":");
+$line2 = strtok($lines2and3_formatted, " ");
+$line3 = ltrim($lines2and3_formatted, $line2);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,19 +86,19 @@
 
         <nav class="" id="drawer">
             <div class="container-drawer">
-                <a href="index.php" target="_blank" class="nav-link"  aria-current="page">
+                <a href="./index.php" target="_self" class="nav-link"  aria-current="page">
                 <img class="icon-logo" src="../../assets/icons/logo-popCoder-multicolor.png" width="60px">
                 </a>
-                <a href="screen.php" target="_blank" class="nav-link" aria-current="page">
+                <a href="../screen/screen.php" target="_self" class="nav-link" aria-current="page">
                     <img class="icon" src="../../assets/icons/icono-musica.png" width="70px">
                 </a>
-                <a href="frontend/views/list/list.php" target="_blank" class="nav-link" aria-current="page">
+                <a href="../list/list.php" target="_self" class="nav-link" aria-current="page">
                     <img class="icon" src="../../assets/icons/icono-gatito.png" width="70px">
                 </a>
-                <a href="frontend/views/trainers/trainers.php" target="_blank" class="nav-link" aria-current="page">
+                <a href="../trainers/trainers.php" target="_self" class="nav-link" aria-current="page">
                     <img class="icon" src="../../assets/icons/icono-patito.png" width="70px">
                 </a>
-                <a href="../../views/coders/coders.php" target="_blank" class="nav-link" aria-current="page">
+                <a href="../list/list.php" target="_self" class="nav-link" aria-current="page">
                     <img class="icon" src="../../assets/icons/icono-user.png" width="70px">
                 </a>                
             </div>
@@ -67,9 +109,9 @@
                 <img src="../../assets/img/home.jpg" alt="Piano" class="piano"/>
             </div>
             <div class="content-title">
-                <p class="title-small">-Lunes con L de-</p>
-                <h1 class="title-big">Lograr</h1>
-                <p class="title-small">Todos tus objetivos</p>
+                <p class="title-small"> <?php echo $line1; ?> </p>
+                <h1 class="title-big"><?php echo $line2; ?></h1>
+                <p class="title-small"><?php echo $line3; ?></p>
             </div>
         </div>
 
