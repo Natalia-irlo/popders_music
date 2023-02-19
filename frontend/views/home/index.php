@@ -57,7 +57,7 @@ $line3 = ltrim($lines2and3_formatted, $line2);
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" href="../../molecules/mol-date/mol-date-style.css"/>
     <link rel="stylesheet" href="../../molecules/mol-drawer/drawer.css"/>
-    <title>Document</title>
+    <title>Home</title>
 </head>
 
 <body>
