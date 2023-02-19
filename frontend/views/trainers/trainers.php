@@ -50,6 +50,11 @@ use App\Controllers\Songs;
             </ul>
         </div>
       <div id="display"></div>
+        <!-- Search bar -->
+        <div class="content-search">
+                <input type="text" placeholder="Escribe un título" class="search" id="search-input">
+                <img src="../../assets/icons/search.png" class="icon-search" id="search-button" />
+            </div>
     </header>
 
     <nav class="nav flex-column" id="drawer">
@@ -93,6 +98,6 @@ use App\Controllers\Songs;
     </div>       
 </div>
 <script src="../../molecules/mol-date/date.js"></script>
-<script src="frontend/views/list/searchBar.js"></script>     
+<script src="../list/searchBar.js"></script>     
 </body>
 </html>
