@@ -88,6 +88,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <input type="text" name="url" id="url" class="plch" placeholder="" required>
                         <small id="r-msg-pass" class="d-block text-danger"></small>
                         <br>
+                        <sub class="txt">Url</sub>&#160;&emsp;
+                        <input type="file" name="img" id="img" class="plch" placeholder="" required>
+                        <small id="r-msg-pass" class="d-block text-danger"></small>
+                        <br>
                         <button class="btn" type="submit">Submit</button>
 
                     </form>

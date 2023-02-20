@@ -92,7 +92,7 @@ $line3 = ltrim($lines2and3_formatted, $line2);
                 <a href="../screen/screen.php" target="_self" class="nav-link" aria-current="page">
                     <img class="icon" src="../../assets/icons/icono-musica.png" width="70px">
                 </a>
-                <a href="../list/list.php" target="_self" class="nav-link" aria-current="page">
+                <a href="../coders/codersImg.php" target="_self" class="nav-link" aria-current="page">
                     <img class="icon" src="../../assets/icons/icono-gatito.png" width="70px">
                 </a>
                 <a href="../trainers/trainers.php" target="_self" class="nav-link" aria-current="page">
