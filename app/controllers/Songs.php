@@ -17,12 +17,13 @@ class Songs extends CrudConnection
 
     public function getRows()
     {
-        $seeAllQuery = 'SELECT title, artist, url FROM song';
+        $seeAllQuery = 'SELECT title, artist, url, img FROM song';
         foreach ($this->connection->query($seeAllQuery) as $row) {
             $rows[] = [
                 $row['title'],
                 $row['artist'],
-                $row['url']
+                $row['url'],
+                $row['img']
             ];
         }
         return $rows;

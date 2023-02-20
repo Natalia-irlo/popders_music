@@ -37,16 +37,9 @@ function newDay(date) {
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
     iconElement.setAttribute("alt", response.data.weather[0].description);
-    getForecast(response.data.coord);
+   
   }
   
-  function getForecast(coordinates) {
-    console.log(coordinates);
-    let apiKey = "a3c3f210b30127cb5ef5c59041b27e29";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric`;
-    console.log(apiUrl);
-    axios.get(apiUrl).then(weekForecast);
-  }
   
   function searchInfo(city) {
     let apiKey = "a3c3f210b30127cb5ef5c59041b27e29";

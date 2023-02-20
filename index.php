@@ -54,10 +54,10 @@ $line3 = ltrim($lines2and3_formatted, $line2);
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" href="../../molecules/mol-date/mol-date-style.css"/>
-    <link rel="stylesheet" href="../../molecules/mol-drawer/drawer.css"/>
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="stylesheet" href="./frontend/molecules/mol-date/mol-date-style.css"/>
+    <link rel="stylesheet" href="./frontend/molecules/mol-drawer/drawer.css"/>
+    <title>Home</title>
 </head>
 
 <body>
@@ -87,26 +87,26 @@ $line3 = ltrim($lines2and3_formatted, $line2);
         <nav class="" id="drawer">
             <div class="container-drawer">
                 <a href="./index.php" target="_self" class="nav-link"  aria-current="page">
-                <img class="icon-logo" src="../../assets/icons/logo-popCoder-multicolor.png" width="60px">
+                <img class="icon-logo" src="./frontend/assets/icons/logo-popCoder-multicolor.png" width="60px">
                 </a>
-                <a href="../screen/screen.php" target="_self" class="nav-link" aria-current="page">
-                    <img class="icon" src="../../assets/icons/icono-musica.png" width="70px">
+                <a href="./frontend/views/screen/screen.php" target="_self" class="nav-link" aria-current="page">
+                    <img class="icon" src="./frontend/assets/icons/icono-musica.png" width="70px">
                 </a>
-                <a href="../list/list.php" target="_self" class="nav-link" aria-current="page">
-                    <img class="icon" src="../../assets/icons/icono-gatito.png" width="70px">
+                <a href="./frontend/views/coders/codersImg.php" target="_self" class="nav-link" aria-current="page">
+                    <img class="icon" src="./frontend/assets/icons/icono-gatito.png" width="70px">
                 </a>
-                <a href="../trainers/trainers.php" target="_self" class="nav-link" aria-current="page">
-                    <img class="icon" src="../../assets/icons/icono-patito.png" width="70px">
+                <a href="./frontend/views/trainers/trainers.php" target="_self" class="nav-link" aria-current="page">
+                    <img class="icon" src="./frontend/assets/icons/icono-patito.png" width="70px">
                 </a>
-                <a href="../list/list.php" target="_self" class="nav-link" aria-current="page">
-                    <img class="icon" src="../../assets/icons/icono-user.png" width="70px">
+                <a href="./frontend/views/list/list.php" target="_self" class="nav-link" aria-current="page">
+                    <img class="icon" src="./frontend/assets/icons/icono-user.png" width="70px">
                 </a>                
             </div>
         </nav>  
 
         <div class="home-center">
             <div class="content-piano">
-                <img src="../../assets/img/home.jpg" alt="Piano" class="piano"/>
+                <img src="./frontend/assets/img/home.jpg" alt="Piano" class="piano"/>
             </div>
             <div class="content-title">
                 <p class="title-small"> <?php echo $line1; ?> </p>
@@ -116,13 +116,13 @@ $line3 = ltrim($lines2and3_formatted, $line2);
         </div>
 
         <div class="img-footer">
-            <img src="../../assets/img/austin-neill.jpg" alt="Concert" class="small-picture">
-            <img src="../../assets/img/joshua-fuller.jpg" alt="Girl singing" class="small-picture">
-            <img src="../../assets/img/keagan-henman.jpg" alt="Boy singing" class="small-picture">
-            <img src="../../assets/img/marcela-laskoski.jpg" alt="Dj" class="small-picture">
+            <img src="./frontend/assets/img/austin-neill.jpg" alt="Concert" class="small-picture">
+            <img src="./frontend/assets/img/joshua-fuller.jpg" alt="Girl singing" class="small-picture">
+            <img src="./frontend/assets/img/keagan-henman.jpg" alt="Boy singing" class="small-picture">
+            <img src="./frontend/assets/img/marcela-laskoski.jpg" alt="Dj" class="small-picture">
         </div>
     </div>
 
-    <script src="../../molecules/mol-date/date.js"></script>
+    <script src="./frontend/molecules/mol-date/date.js"></script>
 </body>
 </html>
