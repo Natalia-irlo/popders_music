@@ -1,8 +1,19 @@
+<?php
+
+require_once "../../../vendor/autoload.php";
+
+//require_once "../../../vendor/autoload.php";
+
+use App\Controllers\Songs;
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Table</title>
+    <title>Trainers</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -39,66 +50,54 @@
             </ul>
         </div>
       <div id="display"></div>
+        <!-- Search bar -->
+        <div class="content-search">
+                <input type="text" placeholder="Escribe un título" class="search" id="search-input">
+                <img src="../../assets/icons/search.png" class="icon-search" id="search-button" />
+            </div>
     </header>
 
     <nav class="nav flex-column" id="drawer">
         <div class="container-drawer">
-            <a href="" target="_blank" class="nav-link"  aria-current="page">
+            <a href="../../../index.php" target="_self" class="nav-link"  aria-current="page">
               <img class="icon-logo " src="../../assets/icons/logo-popCoder-multicolor.png" width="10px">
             </a>
-            <a href="" target="_blank" class="nav-link" aria-current="page">
+            <a href="../screen/screen.php" target="_self" class="nav-link" aria-current="page">
                 <img class="icon" src="../../assets/icons/icono-musica.png" width="70px">
             </a>
-            <a href="" target="_blank" class="nav-link" aria-current="page">
+            <a href="../coders/codersImg.php" target="_self" class="nav-link" aria-current="page">
                 <img class="icon" src="../../assets/icons/icono-gatito.png" width="70px">
             </a>
-            <a href="" target="_blank" class="nav-link" aria-current="page">
+            <a href="../trainers/trainers.php" target="_self" class="nav-link" aria-current="page">
                 <img class="icon" src="../../assets/icons/icono-patito.png" width="70px">
             </a>
-            <a href="" target="_blank" class="nav-link" aria-current="page">
+            <a href="../list/list.php" target="_self" class="nav-link" aria-current="page">
                 <img class="icon" src="../../assets/icons/icono-user.png" width="70px">
             </a>            
         </div>
     </nav>
 
     <div class="table-home">
-        <table class="table table-borderless">
-            <thead>
-            <tr>
-            </tr>
-            </thead>
+        <table class="table table-borderless" id="songs-table">
             <tbody>
-                <br>
-                <tr>
-                    <br>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                </tr>
-                <tr>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                </tr>
-                <tr>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                </tr>
-                <tr>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                </tr>
-                <tr>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                    <td><img className="Dos sm-2" src="../../assets/img/coder.png" height="60px" /></td>
-                </tr>
+                <?php
+                $song = new Songs();
+                $list = $song->getRows();
+                for ($i = 0; $i < 3; $i++) {
+                    $row = $list[$i];
+                ?>
+                <td>
+                    <img class="Dos sm-2" src="../../assets/img/coder.png" height="60px" />
+                    <p class='song'><?php echo $row[0]; ?></p>
+                    <p class='song'><?php echo $row[1]; ?></p>
+                    <p class='song'><?php echo $row[2]; ?></p>
+                </td>
+                <?php } ?>
             </tbody>
         </table>
-    </div>    
+    </div>       
 </div>
-<script src="../../molecules/mol-date/date.js"></script>     
+<script src="../../molecules/mol-date/date.js"></script>
+<script src="../list/searchBar.js"></script>     
 </body>
 </html>

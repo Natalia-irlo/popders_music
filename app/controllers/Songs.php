@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Controllers;
+
 use App\Connection\CrudConnection;
 
 //require_once "./vendor/autoload.php";
@@ -15,24 +17,25 @@ class Songs extends CrudConnection
 
     public function getRows()
     {
-        $seeAllQuery = 'SELECT title, artist FROM song';
+        $seeAllQuery = 'SELECT title, artist, url FROM song';
         foreach ($this->connection->query($seeAllQuery) as $row) {
             $rows[] = [
                 $row['title'],
-                $row['artist']
+                $row['artist'],
+                $row['url']
             ];
         }
         return $rows;
     }
 
     public function addRow($id_coder, $title, $artist, $genre, $url, $date, $status)
-    {   
+    {
         $addRowQuery = "insert into song (id_coder,title,artist,genre,url,date,status) values ('$id_coder', '$title' ,'$artist', '$genre', '$url', '$date', '$status')";
         $resultAdd = $this->connection->query($addRowQuery);
-        echo '<script>alert("La canción '. $title .'")</script>';                   
-        if ($resultAdd){
+        echo '<script>alert("La canción ' . $title . '")</script>';
+        if ($resultAdd) {
             return $id_coder;
-        }else {
+        } else {
             return false;
         }
     }
@@ -45,9 +48,9 @@ class Songs extends CrudConnection
 
         $resultUpdate = $this->connection->query($updateQuery);
         echo "Se ha modificado correctamente el " . $title . "\n";
-        if ($resultUpdate){
+        if ($resultUpdate) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
@@ -57,9 +60,9 @@ class Songs extends CrudConnection
         $deleteQuery = "DELETE FROM song WHERE id_song = '$id_song'";
         $resultDelete = $this->connection->query($deleteQuery);
         echo "Se ha eliminado correctamente " . $id_song . "\n";
-        if ($resultDelete){
+        if ($resultDelete) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }

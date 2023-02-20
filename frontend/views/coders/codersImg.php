@@ -50,22 +50,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 
 <head>
-    <title>Table</title>
+    <title>Coders</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="popup.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="list.css">
+    <link rel="stylesheet" href="coders.css">
 
 <body>
     <div class="container-coders">
@@ -88,13 +85,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </ul>
             </div>
             <div id="display"></div>
-              <!-- Search bar -->
-            <div class="content-search">
-                <input type="text" placeholder="Escribe un título" class="search" id="search-input">
-                <img src="../../assets/icons/search.png" class="icon-search" id="search-button" />
-            </div>
         </header>
-
+       <div class='row'>
+        <div class='col-2'>
         <nav class="nav flex-column" id="drawer">
             <div class="container-drawer">
                 <a href="../../../index.php" target="_self" class="nav-link" aria-current="page">
@@ -103,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <a href="../screen/screen.php" target="_self" class="nav-link" aria-current="page">
                     <img class="icon" src="../../assets/icons/icono-musica.png" width="70px">
                 </a>
-                <a href="../coders/codersImg.php" target="_self" class="nav-link" aria-current="page">
+                <a href="./codersImg.php" target="_self" class="nav-link" aria-current="page">
                     <img class="icon" src="../../assets/icons/icono-gatito.png" width="70px">
                 </a>
                 <a href="../trainers/trainers.php" target="_self" class="nav-link" aria-current="page">
@@ -114,68 +107,103 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </a>
             </div>
         </nav>
-
-        <!-- <a href="#" data-toggle="modal" data-target="#exampleModal" class="modal-add"></a> -->
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm" role="document">
-                <div class="modal-content">
-                    <div class="modal-header-sm">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body form text-center">
-                        <form action="#" method=post>
-                            <h1>Add Song</h1>
-                            <sub class="txt">Coder</sub>&#160;
-                            <input type="text" name="coder" id="r-coder" class="plch" placeholder="">
-                            <small id="r-msg-pass" class="d-block text-danger"></small><br>
-                            <sub class="txt">Title</sub>&#160;
-                            <input type="text" name="title" id="r-title" class="plch" placeholder="">
-                            <small id="r-msg-pass" class="d-block text-danger"></small><br>
-
-                            <sub class="txt">Artista</sub>&#160;
-                            <input type="text" name="artist" id="r-artist" class="plch" placeholder="">
-                            <small id="r-msg-pass" class="d-block text-danger"></small><br>
-
-                            <sub class="txt">Genre</sub>&#160;
-                            <input type="text" name="genre" id="r-genre" class="plch" placeholder="">
-                            <small id="r-msg-pass" class="d-block text-danger"></small><br>
-
-                            <sub class="txt">Url</sub>&#160;&emsp;
-                            <input type="text" name="url" id="r-url" class="plch" placeholder="">
-                            <small id="r-msg-pass" class="d-block text-danger"></small>
-                            <br>
-                            <button class="btn" type="submit">Submit</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
         </div>
-
-        <div class="table-home">
-            <table class="table table-borderless" id="songs-table">
-                <tbody>
+        <div class='col-10'>
+        <div class="codersGroup">
+            <div class='containerImg'>
+                <div class="" id="coders-group">
                     <?php
                     $song = new Songs();
                     $list = $song->getRows();
-                    for ($i = 0; $i < 3; $i++) {
+                    for ($i = 0; $i < 1; $i++) {
                         $row = $list[$i];
                     ?>
                         <td>
-                            <img class="Dos sm-2" src="../../assets/img/coder.png" height="60px" />
+                            <img class='avatar' src='./avatares/diana.png' alt='avatar' />
                             <p class='song'><?php echo $row[0]; ?></p>
                             <p class='song'><?php echo $row[1]; ?></p>
                             <p class='song'><?php echo $row[2]; ?></p>
                         </td>
                     <?php } ?>
-                </tbody>
-            </table>
+                    </tbody>
+                </div>
+                <div class="table table-borderless" id="coders-group">
+
+                    <?php
+                    $song = new Songs();
+                    $list = $song->getRows();
+                    for ($i = 0; $i < 1; $i++) {
+                        $row = $list[$i];
+                    ?>
+                        <td>
+                            <img class='avatar' src='./avatares/sharon.png' alt='avatar' />
+                            <p class='song'><?php echo $row[0]; ?></p>
+                            <p class='song'><?php echo $row[1]; ?></p>
+                            <p class='song'><?php echo $row[2]; ?></p>
+                        </td>
+                    <?php } ?>
+                    </tbody>
+                </div>
+            </div>
+            <div class='containerImg'>
+                <div class="table table-borderless" id="coders-group">
+
+                    <?php
+                    $song = new Songs();
+                    $list = $song->getRows();
+                    for ($i = 0; $i < 1; $i++) {
+                        $row = $list[$i];
+                    ?>
+                        <td>
+                            <img class='avatar' src='./avatares/meena.png' alt='avatar' />
+                            <p class='song'><?php echo $row[0]; ?></p>
+                            <p class='song'><?php echo $row[1]; ?></p>
+                            <p class='song'><?php echo $row[2]; ?></p>
+                        </td>
+                    <?php } ?>
+                    </tbody>
+                </div>
+                <div class="table table-borderless" id="coders-group">
+
+                    <?php
+                    $song = new Songs();
+                    $list = $song->getRows();
+                    for ($i = 0; $i < 1; $i++) {
+                        $row = $list[$i];
+                    ?>
+                        <td>
+                            <img class='avatar' src='./avatares/natalia.png' alt='avatar' />
+                            <p class='song'><?php echo $row[0]; ?></p>
+                            <p class='song'><?php echo $row[1]; ?></p>
+                            <p class='song'><?php echo $row[2]; ?></p>
+                        </td>
+                    <?php } ?>
+                    </tbody>
+                </div>
+                <div class="table table-borderless" id="coders-group">
+
+                    <?php
+                    $song = new Songs();
+                    $list = $song->getRows();
+                    for ($i = 0; $i < 1; $i++) {
+                        $row = $list[$i];
+                    ?>
+                        <td>
+                            <img class='avatar' src='./avatares/gabriela.png' alt='avatar' />
+                            <p class='song'><?php echo $row[0]; ?></p>
+                            <p class='song'><?php echo $row[1]; ?></p>
+                            <p class='song'><?php echo $row[2]; ?></p>
+                        </td>
+                    <?php } ?>
+                    </tbody>
+                </div>
+            </div>
+        </div>
+        </div>
         </div>
     </div>
     <script src="../../molecules/mol-date/date.js"></script>
-    <script src="searchBar.js"></script>
+    <script src="frontend/views/list/searchBar.js"></script>
 </body>
 
 </html>

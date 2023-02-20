@@ -4,11 +4,13 @@
 }
   
 body{
-    height: 100%;
-    width: 100vw;
-    background-image: url(../../assets/img/background.jpg);
-    background-size: 100%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url(../../assets/img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
 }
 
 .container{
@@ -27,7 +29,31 @@ li{
     margin-right: 5px;
     color: #FFBE02;
 } 
-  
+
+.content-search{
+  background-color: whitesmoke;
+  opacity: 0.5;
+  width:fit-content;
+  margin-left: 10rem;
+  display: flex;
+  align-items: center;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.search{
+  width: 370px;
+  height: 60px;
+  border:none;
+  background-color:inherit;
+  font-size: 1.5rem;
+  /* color:white; */
+}
+
+.icon-search{
+  width: 2rem;
+  height:2rem;
+}
 .container-coders{
     background-color: #ffffff9f;
     /*opacity: 90%;*/
@@ -42,7 +68,7 @@ li{
 width: 65vw;
 height: 80vh;   
 margin-left: 17%;
-margin-top: -60%;
+margin-top: -53%;
 }
   
 td img{
@@ -96,5 +122,12 @@ margin-top: 8%;
 #drawer{
   width: 150px !important;
   height: 795px;
-  margin-top: -4%;
+  margin-top: -9%;
+}
+
+.song{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(35, 8, 122);
+  font-weight: 400;
+  font-size: 0.8rem;
 }

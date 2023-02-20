@@ -36,7 +36,7 @@ class SongsTest extends TestCase{
         ];
     
         $resultAdd = $song->addRow($datosEntrada["id_coder"], $datosEntrada["title"], $datosEntrada["artist"], $datosEntrada["genre"], $datosEntrada["url"], $datosEntrada["date"], $datosEntrada["status"]);
-        $this->assertTrue($resultAdd);
+        $this->assertNotFalse($resultAdd);
     }
 
     public function testUpdateRow()
