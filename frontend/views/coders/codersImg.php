@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 require_once "../../../vendor/autoload.php";
 
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-?>
+?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -137,6 +137,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     ?>
                         <td>
                             <img class='avatar' src='./avatares/sharon.png' alt='avatar' />
+                            <p class='song'><?php echo $row[3]; ?></p>
                             <p class='song'><?php echo $row[0]; ?></p>
                             <p class='song'><?php echo $row[1]; ?></p>
                             <p class='song'><?php echo $row[2]; ?></p>
