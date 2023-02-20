@@ -7,7 +7,7 @@ body{
     height: 100vh;
     width: 100vw;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: url(../../assets/img/background.jpg);
+    background-image: url(./frontend/assets/img/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: black;

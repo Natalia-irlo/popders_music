@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <nav class="nav flex-column" id="drawer">
             <div class="container-drawer">
-                <a href="../home/index.php" target="_self" class="nav-link" aria-current="page">
+                <a href="../../../index.php" target="_self" class="nav-link" aria-current="page">
                     <img class="icon-logo " src="../../assets/icons/logo-popCoder-multicolor.png" width="10px">
                 </a>
                 <a href="../screen/screen.php" target="_self" class="nav-link" aria-current="page">
