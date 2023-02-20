@@ -12,9 +12,13 @@ This project is a platform created to manage the songs to say good morning to th
 
 ## Screenshots :desktop_computer:
 ### This is the Popder's Logo
-![This is an image](./front-end/assets/icons/logo-popCoder-multicolor.png)
+![This is an image](./frontend/assets/icons/logo-popCoder-multicolor.png)
 ### These are the page views:
-![This is an image]()
+![This is an image](./frontend/assets/img/home.jpg)
+![This is an image](./frontend/assets/img/list.png)
+![This is an image](./frontend/assets/img/table.png)
+![This is an image](./frontend/assets/img/addsong.png)
+![This is an image](./frontend/assets/img/editor.png)
 
 ## Tech/framework used :electric_plug:
 * **PHPUnit** - utilizado para crear la estructura básica de la página web
@@ -39,4 +43,4 @@ This project is a platform created to manage the songs to say good morning to th
 * [Natalia Iriarte](https://github.com/Natalia-irlo) Developer
 
 ## License :closed_lock_with_key:
-© [POPDERS]()
+© [POPDERS](http://www.popders.es/)
