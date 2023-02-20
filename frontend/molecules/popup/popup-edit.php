@@ -9,19 +9,18 @@ $updateSong = new Songs;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $updateNameSong = filter_input(INPUT_POST, "song");
     $updateNameCoder = filter_input(INPUT_POST, "coder");
     $updateTitle = filter_input(INPUT_POST, "title");
     $updateArtist = filter_input(INPUT_POST, "artist");
     $updateGenre = filter_input(INPUT_POST, "genre");
     $updateURL = filter_input(INPUT_POST, "url");
 
-    $id_song = $updateSong->existsSong($updateNameCoder);
+    $id_Coder = $updateCoder->existsCoder($updateNameCoder);
 
     if ($id_Coder) {
         $go = true;
     } else {
-        $go = $updateCoder->updateRow($updateNameCoder);
+        $go = $updateCoder->addRow($updateNameCoder);
     }
 
     if ($go) {
@@ -35,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $updatePlayed = 0;
 
 
-        $updateSong->updateRow($id_song, $id_Coder, $updateTitle, $updateArtist, $updateGenre, $updateURL, $updateDate, $updatePlayed);
+        $updateSong->updateRow($id_Coder, $updateTitle, $updateArtist, $updateGenre, $updateURL, $updateDate, $updatePlayed, $updateSong);
     }
 }
 
