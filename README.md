@@ -33,7 +33,7 @@ This project is a platform created to manage the songs to say good morning to th
 * Then, ***$ git clone https://github.com/Natalia-irlo/popders_music.git***
 
 ## How to use? :key:
-* In te project directory run ***$ composer init ***
+* In te project directory run ***$ composer init***
 
 ## Contributors :family_woman_woman_girl_girl:
 * [Sharon Infante](https://github.com/SharonInfante) Scrum Master and Developer
